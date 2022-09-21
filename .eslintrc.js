@@ -34,5 +34,5 @@ module.exports = {
       }
     ]
   },
-  ignorePatterns: ['.eslintrc.js']
+  ignorePatterns: ['.eslintrc.js', 'i18n.js']
 };

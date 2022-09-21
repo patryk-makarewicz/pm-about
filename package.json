@@ -7,9 +7,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "less": "lessc --js src/antd-customized.less src/antd-customized.css"
+    "less": "lessc --js src/styles/antd-customized.less src/styles/antd-customized.scss"
   },
   "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
     "antd": "^4.23.2",
     "axios": "^0.27.2",
     "i18next-http-backend": "^1.4.2",
@@ -25,9 +28,6 @@
     "web-vitals": "^2.1.0"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^29.0.3",
     "@types/node": "^18.7.18",
     "@types/react": "^18.0.20",

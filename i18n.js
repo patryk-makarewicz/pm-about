@@ -9,7 +9,7 @@ i18n
     lng: 'en',
     backend: {
       /* translation file path */
-      loadPath: '/locales/{{lng}}/common.json'
+      loadPath: '/translations/{{lng}}.json'
     },
     fallbackLng: 'en',
     debug: false,

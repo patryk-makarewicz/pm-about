@@ -1,0 +1,14 @@
+{
+  "name": "makaDev Patryk Makarewicz",
+  "mode": "Select mode:",
+  "language": "Select language:",
+  "header": {
+    "about": "About me",
+    "tech": "Tech",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "Copyright Ⓒ {{year}} makaDev Patryk Makarewicz"
+  }
+}
