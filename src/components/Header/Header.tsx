@@ -3,7 +3,7 @@ import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { modeState } from '../../state/appState';
 
 import { useTranslation } from 'react-i18next';
-import { Anchor, Switch } from 'antd';
+import { Anchor, Button, Switch } from 'antd';
 
 import { ReactComponent as Logo } from '../../assets/logo_dark.svg';
 import { ReactComponent as LogoWhite } from '../../assets/logo_light.svg';
@@ -30,8 +30,8 @@ export const Header = () => {
     setMode((prev) => !prev);
   };
 
-  const onChangeLanguage = (checked: boolean) => {
-    if (checked) {
+  const onChangeLanguage = () => {
+    if (language === 'pl') {
       changeLanguage('en');
     } else {
       changeLanguage('pl');
@@ -70,9 +70,9 @@ export const Header = () => {
           <Switch defaultChecked checked={mode} onChange={onChangeMode} size="small" style={{ margin: '0 10px' }} />
           {renderMode()}
           <Styled.Text>{t('language')}</Styled.Text>
-
-          <Switch checked={language === 'en'} onChange={onChangeLanguage} size="small" style={{ margin: '0 10px' }} />
-          {renderFlag()}
+          <Button type="text" onClick={onChangeLanguage}>
+            {renderFlag()}
+          </Button>
         </Styled.InnerWrapper>
       </Styled.Config>
 
