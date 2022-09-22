@@ -1,5 +1,4 @@
-import { Button } from 'antd';
-import { Header } from 'components/Header';
+import { Layout } from 'layout';
 import { PageLayout } from 'layout/PageLayout';
 import { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
@@ -20,11 +19,11 @@ export const App = () => {
 
   return (
     <div data-theme={darkMode ? 'dark' : 'light'}>
-      <Header />
-      <PageLayout>
-        <h1>Hello World!</h1>
-        <Button type="primary">TEST</Button>
-      </PageLayout>
+      <Layout>
+        <PageLayout>
+          <h1>Hello World!</h1>
+        </PageLayout>
+      </Layout>
     </div>
   );
 };
