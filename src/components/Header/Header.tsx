@@ -1,17 +1,17 @@
+import { useState } from 'react';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { modeState } from '../../state/appState';
+
 import { useTranslation } from 'react-i18next';
 import { Anchor, Switch } from 'antd';
 
 import { ReactComponent as Logo } from '../../assets/logo_dark.svg';
-
-import LogoLight from '../../assets/logo_light.svg';
-import FlagPl from '../../assets/flag_poland.svg';
+import { ReactComponent as LogoWhite } from '../../assets/logo_light.svg';
+import { ReactComponent as FlagPl } from '../../assets/flag_poland.svg';
+import { ReactComponent as ModeDark } from '../../assets/mode_dark.svg';
+import { ReactComponent as ModeLight } from '../../assets/mode_light.svg';
 import FlagEn from '../../assets/flag_en.png';
-import ModeDark from '../../assets/mode_dark.svg';
-import ModeLight from '../../assets/mode_light.svg';
 import * as Styled from './Header.styles';
-import { useState } from 'react';
-import { useRecoilValue, useSetRecoilState } from 'recoil';
-import { modeState } from '../../state/appState';
 
 const { Link } = Anchor;
 
@@ -42,23 +42,23 @@ export const Header = () => {
     if (!mode) {
       return <Logo width={120} height={45} />;
     } else {
-      return <LogoLight alt={t('name')} title={t('name')} width={120} height={45} />;
+      return <LogoWhite width={120} height={45} />;
     }
   };
 
   const renderFlag = () => {
     if (language === 'en') {
-      return <img src={FlagEn.src} alt="Language flag En" width={24} height={24} style={{ marginLeft: '3px' }} />;
+      return <img src={FlagEn} alt="Language flag En" width={24} height={24} style={{ marginLeft: '3px' }} />;
     } else {
-      return <FlagPl alt="Language flag Pl" width={30} height={25} />;
+      return <FlagPl width={30} height={25} />;
     }
   };
 
   const renderMode = () => {
     if (mode) {
-      return <ModeDark alt="Mode icon" style={{ marginRight: '20px' }} />;
+      return <ModeDark style={{ marginRight: '20px' }} />;
     } else {
-      return <ModeLight alt="Mode icon" style={{ marginRight: '20px' }} />;
+      return <ModeLight style={{ marginRight: '20px' }} />;
     }
   };
 

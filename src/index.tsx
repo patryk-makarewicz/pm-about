@@ -5,11 +5,14 @@ import reportWebVitals from './reportWebVitals';
 import { App } from 'components/App';
 import './i18n';
 import './styles/global.scss';
+import { RecoilRoot } from 'recoil';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <App />
+    <RecoilRoot>
+      <App />
+    </RecoilRoot>
   </React.StrictMode>
 );
 
