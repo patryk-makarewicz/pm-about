@@ -5,13 +5,12 @@ import { modeState } from '../../state/appState';
 import { useTranslation } from 'react-i18next';
 import { Anchor, Button, Switch } from 'antd';
 
-import { ReactComponent as Logo } from '../../assets/logo_dark.svg';
-import { ReactComponent as LogoWhite } from '../../assets/logo_light.svg';
 import { ReactComponent as FlagPl } from '../../assets/flag_poland.svg';
 import { ReactComponent as ModeDark } from '../../assets/mode_dark.svg';
 import { ReactComponent as ModeLight } from '../../assets/mode_light.svg';
 import FlagEn from '../../assets/flag_en.png';
 import * as Styled from './Header.styles';
+import { Logo } from 'Utils/logo';
 
 const { Link } = Anchor;
 
@@ -35,14 +34,6 @@ export const Header = () => {
       changeLanguage('en');
     } else {
       changeLanguage('pl');
-    }
-  };
-
-  const renderLogo = () => {
-    if (!mode) {
-      return <Logo width={120} height={45} />;
-    } else {
-      return <LogoWhite width={120} height={45} />;
     }
   };
 
@@ -78,7 +69,7 @@ export const Header = () => {
 
       <Styled.Header>
         <Styled.InnerWrapper>
-          <h1 style={{ margin: 'auto 20px auto 0', display: 'flex' }}>{renderLogo()}</h1>
+          <h1 style={{ margin: 'auto 20px auto 0', display: 'flex' }}>{Logo()}</h1>
           <Styled.Anchor affix={false} targetOffset={95}>
             <Link href="#about" title={t('header.about')} />
             <Link href="#tech" title={t('header.tech')} />

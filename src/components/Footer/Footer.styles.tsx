@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { colors } from '../../styles/colors';
+import { fontSize } from 'styles/variables';
 
 export const Footer = styled.footer`
   width: 100%;
   height: 60px;
-  border-top: 1px solid ${colors.gray};
+  border-top: 1px solid var(--border-color);
   box-shadow: 0px -2px 12px rgba(0, 0, 0, 0.2);
-  background-color: white;
+  background-color: var(--background-color);
   position: relative;
   top: 0;
   z-index: 1;
@@ -23,6 +23,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Text = styled.p`
-  margin-bottom: 0;
-  font-size: 12px;
+  color: var(--text-color);
+  font-size: ${fontSize.s};
+  margin: 0;
 `;
