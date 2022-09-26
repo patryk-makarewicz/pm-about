@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { fontSize } from 'styles/variables';
+import { fontSize, shadow } from 'styles/variables';
 
 export const Footer = styled.footer`
   width: 100%;
   height: 60px;
   border-top: 1px solid var(--border-color);
-  box-shadow: 0px -2px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: ${shadow.second};
   background-color: var(--background-color);
   position: relative;
   top: 0;

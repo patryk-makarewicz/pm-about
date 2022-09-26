@@ -60,3 +60,10 @@ export const breakpoint = {
   xl: '1200px',
   xll: '1400px'
 };
+
+//----- Shadows -----
+
+export const shadow = {
+  first: '0 4px 12px rgba(0, 0, 0, 0.2)',
+  second: '0px -2px 12px rgba(0, 0, 0, 0.2)'
+};

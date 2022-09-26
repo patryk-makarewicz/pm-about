@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Anchor as AntdAnchor } from 'antd';
 import { colors } from '../../styles/colors';
-import { fontSize } from '../../styles/variables';
+import { fontSize, shadow } from '../../styles/variables';
 
 interface InnerWrapperProps {
   $justifyEnd?: boolean;
@@ -33,7 +33,7 @@ export const Header = styled.header`
   width: 100%;
   height: 60px;
   border-bottom: 1px solid var(--border-color);
-  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: ${shadow.first};
   background-color: var(--background-color);
   position: sticky;
   top: 0px;
