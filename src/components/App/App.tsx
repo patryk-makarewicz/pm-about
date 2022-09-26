@@ -1,3 +1,4 @@
+import { About } from 'components/About';
 import { Layout } from 'layout';
 import { PageLayout } from 'layout/PageLayout';
 import { useEffect } from 'react';
@@ -21,7 +22,7 @@ export const App = () => {
     <div data-theme={darkMode ? 'dark' : 'light'}>
       <Layout>
         <PageLayout>
-          <h1>Hello World!</h1>
+          <About />
         </PageLayout>
       </Layout>
     </div>
