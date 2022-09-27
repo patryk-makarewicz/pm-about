@@ -14,7 +14,7 @@ export const Photo = styled.img`
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border: 4px solid ${colors.white};
+  border: 4px solid var(--background-color);
   box-shadow: ${shadow.first};
   margin-bottom: ${margin.l};
 `;
