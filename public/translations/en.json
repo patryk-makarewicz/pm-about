@@ -10,5 +10,11 @@
   },
   "footer": {
     "copyright": "Copyright Ⓒ {{year}} makaDev Patryk Makarewicz"
+  },
+  "greeting": {
+    "hi": "Hi there!",
+    "dev": "My name is Patryk and I’m",
+    "devGreen": "Frontend Developer | React.",
+    "content": "You might be interested in checking the list of my skills . Don’t forget to have a glimpse at my projects. Currently I’m looking for new challenges so if you have one - contact me"
   }
 }
