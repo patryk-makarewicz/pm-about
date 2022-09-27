@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { colors } from 'styles/colors';
-import { fontSize, fontWeight, shadow } from 'styles/variables';
+import { fontSize, fontWeight, margin, shadow } from 'styles/variables';
 
 type TextProps = {
   $marginBottom?: string;
@@ -16,7 +16,7 @@ export const Photo = styled.img`
   border-radius: 50%;
   border: 4px solid ${colors.white};
   box-shadow: ${shadow.first};
-  margin-bottom: 10px;
+  margin-bottom: ${margin.l};
 `;
 
 export const Greeting = styled.div`
@@ -84,4 +84,21 @@ export const Text = styled.p<TextProps>`
 export const TextGreen = styled.span`
   color: ${colors.green};
   font-weight: ${fontWeight.bold};
+`;
+
+export const ButtonIcon = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--background-color);
+  border-radius: 50%;
+  box-shadow: ${shadow.first};
+  transition: all 0.2s ease-in-out;
+
+  :hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0.8;
+  }
 `;
