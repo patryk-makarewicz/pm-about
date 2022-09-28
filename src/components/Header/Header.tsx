@@ -55,7 +55,7 @@ export const Header = () => {
 
   return (
     <>
-      <Styled.Config>
+      <Styled.Config id="about">
         <Styled.InnerWrapper $justifyEnd>
           <Styled.Text>{t('mode')}</Styled.Text>
           <Switch defaultChecked checked={mode} onChange={onChangeMode} size="small" style={{ margin: '0 10px' }} />

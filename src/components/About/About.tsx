@@ -10,7 +10,7 @@ export const About = () => {
   const { t } = useTranslation();
 
   return (
-    <Styled.Wrapper id="about">
+    <Styled.Wrapper>
       <Styled.Greeting>
         <Styled.Cloud>
           {t('greeting.hi')} <Styled.Hand>🖐</Styled.Hand>

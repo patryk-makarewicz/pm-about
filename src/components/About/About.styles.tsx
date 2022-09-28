@@ -6,9 +6,7 @@ type TextProps = {
   $marginBottom?: string;
 };
 
-export const Wrapper = styled.section`
-  padding: 20px 0;
-`;
+export const Wrapper = styled.section``;
 
 export const Photo = styled.img`
   width: 120px;
