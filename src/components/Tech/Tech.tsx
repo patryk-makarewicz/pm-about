@@ -1,45 +1,33 @@
-import { Card as AntdCard } from 'antd';
-import { ReactComponent as ReactLogo } from '../../assets/logo/logo-react.svg';
-import { ReactComponent as SassLogo } from '../../assets/logo/logo-sass.svg';
+import { Card } from 'components/Card';
+
 import HtmlLogo from '../../assets/logo/logo-html5.png';
 import CssLogo from '../../assets/logo/logo-css3.png';
-
+import ReactLogo from '../../assets/logo/logo-react.png';
 import JsLogo from '../../assets/logo/logo-js.png';
 import * as Styled from './Tech.styles';
-import { Card } from 'components/Card';
 
 export const Tech = () => {
   return (
     <Styled.Wrapper id="tech">
-      <Card title="React">
-        <ReactLogo width={50} height={50} />
-      </Card>
-      <Card title="JavaScript">
-        <img src={JsLogo} alt="Logo" style={{ width: '50px', height: '50px' }} />
-      </Card>
-      <Card title="HTML">
-        <img src={HtmlLogo} alt="Logo" style={{ width: '50px', height: '50px' }} />
-      </Card>
-      <Card title="CSS">
-        <img src={CssLogo} alt="Logo" style={{ width: '50px', height: '50px' }} />
-      </Card>
-      <Card title="Sass">
-        <SassLogo width={50} height={50} />
-      </Card>
+      <Styled.CardBox>
+        <Card title="React">
+          <img src={ReactLogo} alt="Logo" style={{ width: '50px', height: '50px' }} />
+        </Card>
+        <Card title="JavaScript">
+          <img src={JsLogo} alt="Logo" style={{ width: '50px', height: '50px' }} />
+        </Card>
+        <Card title="HTML">
+          <img src={HtmlLogo} alt="Logo" style={{ width: '50px', height: '50px' }} />
+        </Card>
+        <Card title="CSS">
+          <img src={CssLogo} alt="Logo" style={{ width: '50px', height: '50px' }} />
+        </Card>
+      </Styled.CardBox>
 
-      <AntdCard title="Sass" style={{ width: 140 }}>
-        <SassLogo width={50} height={50} />
-      </AntdCard>
       <h2>Tech</h2>
       <div>
         <article>
-          <p>💪</p>
-          <h3>Working knowledge</h3>
           <ul>
-            <li>
-              <img src="../assets/img/small-tick.svg" alt="small tick" />
-              &nbsp; React
-            </li>
             <li>
               <img src="../assets/img/small-tick-2.svg" alt="small tick" />
               &nbsp; TypeScript
@@ -52,10 +40,7 @@ export const Tech = () => {
               <img src="../assets/img/small-tick.svg" alt="small tick" />
               &nbsp; Rest API
             </li>
-            <li>
-              <img src="../assets/img/small-tick.svg" alt="small tick" />
-              &nbsp; JavaScript
-            </li>
+
             <li>
               <img src="../assets/img/small-tick-2.svg" alt="small tick" />
               &nbsp; Next.js
@@ -72,10 +57,7 @@ export const Tech = () => {
               <img src="../assets/img/small-tick.svg" alt="small tick" />
               &nbsp; BEM methodology
             </li>
-            <li>
-              <img src="../assets/img/small-tick.svg" alt="small tick" />
-              &nbsp; HTML5
-            </li>
+
             <li>
               <img src="../assets/img/small-tick.svg" alt="small tick" />
               &nbsp; GIT / GitFlow
