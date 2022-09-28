@@ -1,9 +1,12 @@
 import { Card } from 'components/Card';
 
+import ReactLogo from '../../assets/logo/logo-react.png';
+import TsLogo from '../../assets/logo/logo-ts.png';
+import JsLogo from '../../assets/logo/logo-js.png';
+import ApiLogo from '../../assets/logo/logo-api.png';
 import HtmlLogo from '../../assets/logo/logo-html5.png';
 import CssLogo from '../../assets/logo/logo-css3.png';
-import ReactLogo from '../../assets/logo/logo-react.png';
-import JsLogo from '../../assets/logo/logo-js.png';
+
 import * as Styled from './Tech.styles';
 
 export const Tech = () => {
@@ -11,27 +14,31 @@ export const Tech = () => {
     <Styled.Wrapper id="tech">
       <Styled.CardBox>
         <Card title="React">
-          <img src={ReactLogo} alt="Logo" style={{ width: '50px', height: '50px' }} />
+          <Styled.Logo src={ReactLogo} alt="Logo" />
+        </Card>
+        <Card title="TypeScript">
+          <Styled.Logo src={TsLogo} alt="Logo" />
         </Card>
         <Card title="JavaScript">
-          <img src={JsLogo} alt="Logo" style={{ width: '50px', height: '50px' }} />
+          <Styled.Logo src={JsLogo} alt="Logo" />
+        </Card>
+        <Card title="rest API">
+          <Styled.Logo src={ApiLogo} alt="Logo" />
         </Card>
         <Card title="HTML">
-          <img src={HtmlLogo} alt="Logo" style={{ width: '50px', height: '50px' }} />
+          <Styled.Logo src={HtmlLogo} alt="Logo" />
         </Card>
         <Card title="CSS">
-          <img src={CssLogo} alt="Logo" style={{ width: '50px', height: '50px' }} />
+          <Styled.Logo src={CssLogo} alt="Logo" />
         </Card>
       </Styled.CardBox>
+
+      {/* TODO -> Logo */}
 
       <h2>Tech</h2>
       <div>
         <article>
           <ul>
-            <li>
-              <img src="../assets/img/small-tick-2.svg" alt="small tick" />
-              &nbsp; TypeScript
-            </li>
             <li>
               <img src="../assets/img/small-tick.svg" alt="small tick" />
               &nbsp; Recoil / Context API / Redux
