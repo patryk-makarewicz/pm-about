@@ -4,7 +4,7 @@
   "language": "Wybierz język:",
   "header": {
     "about": "O mnie",
-    "tech": "Umiejętności",
+    "tech": "Technologie",
     "projects": "Projekty",
     "contact": "Kontakt"
   },
@@ -16,5 +16,8 @@
     "dev": "Nazywam się Patryk i jestem",
     "devGreen": "Frontend Developer | React.",
     "content": "Może zainteresuje Cię lista moich umiejętności. Nie zapomnij rzucić okiem na moje projekty. Obecnie szukam nowych wyzwań, więc jeśli masz jakieś - skontaktuj się ze mną"
+  },
+  "technologies": {
+    "title": "Technologie"
   }
 }
