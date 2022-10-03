@@ -2,8 +2,8 @@ import * as Styled from './Contact.styles';
 
 export const Contact = () => {
   return (
-    <Styled.Wrapper id="contact">
-      <h2>Contact</h2>
+    <div id="contact">
+      <Styled.SectionTitle>Contact</Styled.SectionTitle>
       <p>I’m open for new opportunities. If you have one for me we should talk!</p>
       <p>FORM</p>
       <div>
@@ -18,6 +18,6 @@ export const Contact = () => {
           </a>
         </div>
       </div>
-    </Styled.Wrapper>
+    </div>
   );
 };
