@@ -8,7 +8,7 @@ export const Contact = () => {
   return (
     <div id="contact">
       <Styled.SectionTitle>{t('contact.title')}</Styled.SectionTitle>
-      <p>I’m open for new opportunities. If you have one for me we should talk!</p>
+      <Styled.Paragraph>I’m open for new opportunities. If you have one for me we should talk!</Styled.Paragraph>
       <p>FORM</p>
       <SocialMedia />
     </div>

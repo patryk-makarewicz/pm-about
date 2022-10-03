@@ -6,3 +6,7 @@ export const SectionTitle = styled.h2`
   margin-bottom: ${margin.xl};
   text-align: center;
 `;
+
+export const Paragraph = styled.p`
+  text-align: center;
+`;

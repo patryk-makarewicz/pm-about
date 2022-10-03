@@ -7,7 +7,7 @@ export const Projects = () => {
   return (
     <div id="projects">
       <Styled.SectionTitle>{t('projects.title')}</Styled.SectionTitle>
-      <p>{t('projects.description')}</p>
+      <Styled.Paragraph>{t('projects.description')}</Styled.Paragraph>
     </div>
   );
 };
