@@ -8,8 +8,8 @@ type CardProps = {
 
 export const Card = ({ children, title }: CardProps) => (
   <Styled.Wrapper>
-    <div>{children}</div>
+    <Styled.LogoBox>{children}</Styled.LogoBox>
     <Divider />
-    <div>{title}</div>
+    <Styled.Label>{title}</Styled.Label>
   </Styled.Wrapper>
 );
