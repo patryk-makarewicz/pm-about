@@ -20,8 +20,12 @@
   "technologies": {
     "title": "Technologies"
   },
+  "projects": {
+    "title": "Projects",
+    "description": "I want to show you some of my projects that I have completed in my spare time, unfortunately I cannot boast of commercial projects."
+  },
   "contact": {
     "title": "Contact",
-    "description": "I want to show you some of my projects that I have completed in my spare time, unfortunately I cannot boast of commercial projects."
+    "description": "I’m open for new opportunities / cooperation. If you have something for me, we should talk"
   }
 }

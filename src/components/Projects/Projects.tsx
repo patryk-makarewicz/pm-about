@@ -1,13 +1,13 @@
+import { useTranslation } from 'react-i18next';
 import * as Styled from './Projects.styles';
 
 export const Projects = () => {
+  const { t } = useTranslation();
+
   return (
     <div id="projects">
-      <Styled.SectionTitle>Projects</Styled.SectionTitle>
-      <p>
-        I started my frontend developer path in March 2020. Since then, I’ve built some projects. Here’s the list of the
-        things I’ve done so far.
-      </p>
+      <Styled.SectionTitle>{t('projects.title')}</Styled.SectionTitle>
+      <p>{t('projects.description')}</p>
     </div>
   );
 };

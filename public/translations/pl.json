@@ -20,8 +20,12 @@
   "technologies": {
     "title": "Technologie"
   },
+  "projects": {
+    "title": "Projekty",
+    "description": "Chcę Ci pokazać niektóre z moich projektów które zrealizowałem w wolnym czasie, niestety nie mogę pochwalić się projektami komercyjnymi."
+  },
   "contact": {
     "title": "Kontakt",
-    "description": "Chcę Ci pokazać niektóre z moich projektów które zrealizowałem w wolnym czasie, niestety nie mogę pochwalić się projektami komercyjnymi."
+    "description": "Jestem otwarty na nowe możliwości / współpracę. Jeśli masz coś dla mnie, powinniśmy porozmawiać"
   }
 }
