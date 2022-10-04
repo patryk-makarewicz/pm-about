@@ -31,7 +31,8 @@
     "lastName": "Last name",
     "email": "E-mail",
     "phone": "Phone number",
-    "message": "Your message...",
+    "message": "Message",
+    "messagePlaceholder": "Your message...",
     "submit": "Submit"
   }
 }

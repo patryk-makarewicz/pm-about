@@ -31,7 +31,8 @@
     "lastName": "Nazwisko",
     "email": "E-mail",
     "phone": "Numer telefonu",
-    "message": "Twoja wiadomość...",
+    "message": "Wiadomość",
+    "messagePlaceholder": "Twoja wiadomość...",
     "submit": "Wyślij"
   }
 }
