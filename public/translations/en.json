@@ -26,6 +26,12 @@
   },
   "contact": {
     "title": "Contact",
-    "description": "I’m open for new opportunities / cooperation. If you have something for me, we should talk"
+    "description": "I’m open for new opportunities / cooperation. If you have something for me, we should talk",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "E-mail",
+    "phone": "Phone number",
+    "message": "Your message...",
+    "submit": "Submit"
   }
 }

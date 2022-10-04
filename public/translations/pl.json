@@ -26,6 +26,12 @@
   },
   "contact": {
     "title": "Kontakt",
-    "description": "Jestem otwarty na nowe możliwości / współpracę. Jeśli masz coś dla mnie, powinniśmy porozmawiać"
+    "description": "Jestem otwarty na nowe możliwości / współpracę. Jeśli masz coś dla mnie, powinniśmy porozmawiać",
+    "firstName": "Imię",
+    "lastName": "Nazwisko",
+    "email": "E-mail",
+    "phone": "Numer telefonu",
+    "message": "Twoja wiadomość...",
+    "submit": "Wyślij"
   }
 }
