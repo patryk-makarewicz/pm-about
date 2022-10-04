@@ -4,7 +4,7 @@
   "language": "Wybierz język:",
   "header": {
     "about": "O mnie",
-    "tech": "Technologie",
+    "tech": "Tech",
     "projects": "Projekty",
     "contact": "Kontakt"
   },
@@ -18,7 +18,7 @@
     "content": "Może zainteresuje Cię lista moich umiejętności. Nie zapomnij rzucić okiem na moje projekty. Obecnie szukam nowych wyzwań, więc jeśli masz jakieś - skontaktuj się ze mną"
   },
   "technologies": {
-    "title": "Technologie"
+    "title": "Tech stack"
   },
   "projects": {
     "title": "Projekty",

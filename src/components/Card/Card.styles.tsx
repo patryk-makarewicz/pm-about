@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { colors } from 'styles/colors';
-import { fontWeight } from 'styles/variables';
+import { fontWeight, shadow } from 'styles/variables';
 
 export const Wrapper = styled.div`
   color: ${colors.black};
@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
   width: 140px;
   font-weight: ${fontWeight.semiBold};
   border: 1px solid #dddada;
+  box-shadow: ${shadow.first};
 `;
 
 export const LogoBox = styled.div`
