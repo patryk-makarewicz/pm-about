@@ -13,12 +13,19 @@ export const Paragraph = styled.p`
 `;
 
 export const FormBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   max-width: 500px;
   margin: 40px auto 60px auto;
 `;
 
-export const Form = styled(AntdForm)`
+export const Form: typeof AntdForm = styled(AntdForm)`
   .ant-row {
     justify-content: center;
+  }
+
+  .ant-input {
+    box-shadow: inset 0px 0px 10px -6px rgba(66, 68, 90, 1);
   }
 `;
