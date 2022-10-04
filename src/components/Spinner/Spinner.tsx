@@ -7,7 +7,7 @@ export const Spinner = () => {
 
   return (
     <Styled.Wrapper>
-      <Spin indicator={icon} style={{ margin: 'auto' }} />
+      <Spin indicator={icon} />
     </Styled.Wrapper>
   );
 };
