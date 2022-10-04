@@ -1,21 +1,20 @@
+import { pxToRem } from './helpers';
+
 //----- Fonts -----
 
 export const fontWeight = {
-  thin: 100,
-  light: 300,
   regular: 400,
-  medium: 500,
   semiBold: 600,
   bold: 700
 };
 
 export const fontSize = {
-  xs: '12px',
-  s: '14px',
-  m: '16px',
-  l: '18px',
-  xl: '21px',
-  xll: '36px'
+  xs: `${pxToRem('12px')}`,
+  s: `${pxToRem('14px')}`,
+  m: `${pxToRem('16px')}`,
+  l: `${pxToRem('18px')}`,
+  xl: `${pxToRem('21px')}`,
+  xll: `${pxToRem('36px')}`
 };
 
 //----- Line height -----

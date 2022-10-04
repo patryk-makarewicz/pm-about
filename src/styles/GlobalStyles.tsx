@@ -1,6 +1,7 @@
-@import './antd-customized.scss';
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+import { createGlobalStyle } from 'styled-components';
+import './antd-customized.scss';
 
+const GlobalStyles = createGlobalStyle`
 *,
 *::before,
 *::after {
@@ -39,3 +40,6 @@ a {
   --background-secondary-color: #2b2f34;
   --border-color: #242424;
 }
+`;
+
+export default GlobalStyles;

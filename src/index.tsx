@@ -3,9 +3,8 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 
 import { App } from 'components/App';
-import './i18n';
-import './styles/global.scss';
 import { RecoilRoot } from 'recoil';
+import './i18n';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(

@@ -8,6 +8,7 @@ import { PageLayoutFull } from 'layout/PageLayoutFull';
 import { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 import { modeState } from 'state/appState';
+import GlobalStyles from 'styles/GlobalStyles';
 
 export const App = () => {
   const [darkMode, setDarkMode] = useRecoilState(modeState);
@@ -25,25 +26,28 @@ export const App = () => {
   }, [darkMode]);
 
   return (
-    <div data-theme={darkMode ? 'dark' : 'light'}>
-      <Layout>
-        <PageLayout>
-          <About />
-        </PageLayout>
-        <PageLayoutFull>
+    <>
+      <GlobalStyles />
+      <div data-theme={darkMode ? 'dark' : 'light'}>
+        <Layout>
           <PageLayout>
-            <Tech />
+            <About />
           </PageLayout>
-        </PageLayoutFull>
-        <PageLayout>
-          <Projects />
-        </PageLayout>
-        <PageLayoutFull>
+          <PageLayoutFull>
+            <PageLayout>
+              <Tech />
+            </PageLayout>
+          </PageLayoutFull>
           <PageLayout>
-            <Contact />
+            <Projects />
           </PageLayout>
-        </PageLayoutFull>
-      </Layout>
-    </div>
+          <PageLayoutFull>
+            <PageLayout>
+              <Contact />
+            </PageLayout>
+          </PageLayoutFull>
+        </Layout>
+      </div>
+    </>
   );
 };

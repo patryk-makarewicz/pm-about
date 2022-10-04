@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Form as AntdForm } from 'antd';
 import { fontSize, margin } from 'styles/variables';
 
 export const SectionTitle = styled.h2`
@@ -14,4 +15,10 @@ export const Paragraph = styled.p`
 export const FormBox = styled.div`
   max-width: 500px;
   margin: 40px auto 60px auto;
+`;
+
+export const Form = styled(AntdForm)`
+  .ant-row {
+    justify-content: center;
+  }
 `;

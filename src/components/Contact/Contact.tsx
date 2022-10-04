@@ -32,7 +32,7 @@ export const Contact = () => {
       <Styled.SectionTitle>{t('contact.title')}</Styled.SectionTitle>
       <Styled.Paragraph>I’m open for new opportunities. If you have one for me we should talk!</Styled.Paragraph>
       <Styled.FormBox>
-        <Form {...layout} name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
+        <Styled.Form {...layout} name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
           <Form.Item name={['First name']} rules={[{ required: true }]}>
             <Input placeholder="First name" />
           </Form.Item>
@@ -46,14 +46,14 @@ export const Contact = () => {
             <Input style={{ width: '100%' }} placeholder="Phone number" />
           </Form.Item>
           <Form.Item name={['Message']}>
-            <Input.TextArea placeholder="Your message..." />
+            <Input.TextArea placeholder="Your message..." style={{ resize: 'none', height: '300px' }} />
           </Form.Item>
-          <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
+          <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 0 }}>
             <Button type="primary" htmlType="submit">
               Submit
             </Button>
           </Form.Item>
-        </Form>
+        </Styled.Form>
       </Styled.FormBox>
       <SocialMedia />
     </div>
