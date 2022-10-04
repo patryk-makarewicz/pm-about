@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 
 import { App } from 'components/App';
 import { RecoilRoot } from 'recoil';
+import { Spinner } from 'components/Spinner';
 import './i18n';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
-  <React.StrictMode>
-    <RecoilRoot>
-      <App />
-    </RecoilRoot>
-  </React.StrictMode>
+  <Suspense fallback={<Spinner />}>
+    <React.StrictMode>
+      <RecoilRoot>
+        <App />
+      </RecoilRoot>
+    </React.StrictMode>
+  </Suspense>
 );
 
 // If you want to start measuring performance in your app, pass a function
