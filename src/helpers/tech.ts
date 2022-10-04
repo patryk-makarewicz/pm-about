@@ -33,7 +33,7 @@ export const techData: TechDataType = [
   {
     id: 6,
     name: 'Redux',
-    logo: `${process.env.PUBLIC_URL}/assets/logo-redux.jpeg`
+    logo: `${process.env.PUBLIC_URL}/assets/logo-redux.png`
   },
   {
     id: 7,
@@ -68,51 +68,46 @@ export const techData: TechDataType = [
   {
     id: 13,
     name: 'Styled Components',
-    logo: `${process.env.PUBLIC_URL}/assets/logo-react.png`
+    logo: `${process.env.PUBLIC_URL}/assets/logo-sc.png`
   },
   {
     id: 14,
-    name: 'Micro Frontend',
-    logo: `${process.env.PUBLIC_URL}/assets/logo-react.png`
+    name: 'Git Hub',
+    logo: `${process.env.PUBLIC_URL}/assets/logo-git.png`
   },
   {
     id: 15,
-    name: 'GIT',
-    logo: `${process.env.PUBLIC_URL}/assets/logo-react.png`
+    name: 'ESLint',
+    logo: `${process.env.PUBLIC_URL}/assets/logo-es.png`
   },
   {
     id: 16,
-    name: 'ESLint',
-    logo: `${process.env.PUBLIC_URL}/assets/logo-react.png`
+    name: 'Prettier',
+    logo: `${process.env.PUBLIC_URL}/assets/logo-prettier.png`
   },
   {
     id: 17,
-    name: 'Prettier',
-    logo: `${process.env.PUBLIC_URL}/assets/logo-react.png`
+    name: 'PWA',
+    logo: `${process.env.PUBLIC_URL}/assets/logo-pwa.png`
   },
   {
     id: 18,
-    name: 'PWA',
-    logo: `${process.env.PUBLIC_URL}/assets/logo-react.png`
+    name: 'RWD',
+    logo: `${process.env.PUBLIC_URL}/assets/logo-rwd.png`
   },
   {
     id: 19,
-    name: 'RWD',
-    logo: `${process.env.PUBLIC_URL}/assets/logo-react.png`
+    name: 'Ant Design',
+    logo: `${process.env.PUBLIC_URL}/assets/logo-antd.jpeg`
   },
   {
     id: 20,
-    name: 'Ant Design',
-    logo: `${process.env.PUBLIC_URL}/assets/logo-react.png`
+    name: 'Material-UI',
+    logo: `${process.env.PUBLIC_URL}/assets/logo-material.png`
   },
   {
     id: 21,
-    name: 'Material-UI',
-    logo: `${process.env.PUBLIC_URL}/assets/logo-react.png`
-  },
-  {
-    id: 22,
     name: 'Figma',
-    logo: `${process.env.PUBLIC_URL}/assets/logo-react.png`
+    logo: `${process.env.PUBLIC_URL}/assets/logo-figma.png`
   }
 ];
