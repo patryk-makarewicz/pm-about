@@ -1,6 +1,16 @@
 import styled from 'styled-components';
 import { colors, fontSize } from 'styles';
 
+export const Container = styled.div`
+  position: relative;
+`;
+
+export const ErrorMessage = styled.span`
+  position: absolute;
+  font-size: ${fontSize.s};
+  color: ${colors.warning};
+`;
+
 export const Label = styled.label`
   font-size: ${fontSize.s};
 `;
@@ -23,7 +33,7 @@ export const Input = styled.input`
 
 export const Textarea = styled.textarea`
   box-shadow: inset 0px 0px 10px -6px rgba(66, 68, 90, 1);
-  margin: 0;
+  margin: 0 0 20px 0;
   width: 100%;
   height: 122px;
   padding: 5px 15px;

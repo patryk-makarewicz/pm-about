@@ -3,10 +3,12 @@ import { useTranslation } from 'react-i18next';
 import { Form, Field } from 'react-final-form';
 
 import { SocialMedia } from 'components/SocialMedia/SocialMedia';
-import { Input, Label, Textarea } from 'components/Form';
+import { Container, ErrorMessage, Input, Label, Textarea } from 'components/Form';
 import emailjs from '@emailjs/browser';
 
 import * as Styled from './Contact.styles';
+import { Row } from 'antd';
+import { Button } from 'components/Button';
 
 export const Contact = () => {
   const { t } = useTranslation();
@@ -44,61 +46,74 @@ export const Contact = () => {
               // @ts-ignore
               errors.firstName = `${t('contact.firstName')} is required`;
             }
+            if (!values.lastName) {
+              // @ts-ignore
+              errors.lastName = `${t('contact.lastName')} is required`;
+            }
+            if (!values.eMail) {
+              // @ts-ignore
+              errors.eMail = `${t('contact.eMail')} is required`;
+            }
+            if (!values.phone) {
+              // @ts-ignore
+              errors.phone = `${t('contact.phone')} is required`;
+            }
 
             return errors;
           }}
-          render={({ handleSubmit, form, submitting, pristine, values }) => (
+          render={({ handleSubmit, submitting }) => (
             // @ts-ignore
             <form onSubmit={handleSubmit} ref={formRef}>
               <Field name="firstName">
                 {({ input, meta }) => (
-                  <div>
+                  <Container>
                     <Label>{t('contact.firstName')}</Label>
                     <Input {...input} type="text" placeholder={t('contact.firstName')} />
-                    {meta.error && meta.touched && <span>{meta.error}</span>}
-                  </div>
+                    {meta.error && meta.touched ? <ErrorMessage>{meta.error}</ErrorMessage> : ''}
+                  </Container>
                 )}
               </Field>
               <Field name="lastName">
                 {({ input, meta }) => (
-                  <div>
+                  <Container>
                     <Label>{t('contact.lastName')}</Label>
                     <Input {...input} type="text" placeholder={t('contact.lastName')} />
-                    {meta.error && meta.touched && <span>{meta.error}</span>}
-                  </div>
+                    {meta.error && meta.touched && <ErrorMessage>{meta.error}</ErrorMessage>}
+                  </Container>
                 )}
               </Field>
               <Field name="eMail">
                 {({ input, meta }) => (
-                  <div>
+                  <Container>
                     <Label>{t('contact.email')}</Label>
                     <Input {...input} type="text" placeholder={t('contact.email')} />
-                    {meta.error && meta.touched && <span>{meta.error}</span>}
-                  </div>
+                    {meta.error && meta.touched && <ErrorMessage>{meta.error}</ErrorMessage>}
+                  </Container>
                 )}
               </Field>
               <Field name="phone">
                 {({ input, meta }) => (
-                  <div>
+                  <Container>
                     <Label>{t('contact.phone')}</Label>
                     <Input {...input} type="text" placeholder={t('contact.phone')} />
-                    {meta.error && meta.touched && <span>{meta.error}</span>}
-                  </div>
+                    {meta.error && meta.touched && <ErrorMessage>{meta.error}</ErrorMessage>}
+                  </Container>
                 )}
               </Field>
               <Field name="message">
                 {({ input, meta }) => (
-                  <div>
+                  <Container>
                     <Label>{t('contact.message')}</Label>
                     <Textarea {...input} placeholder={t('contact.messagePlaceholder')} />
-                    {meta.error && meta.touched && <span>{meta.error}</span>}
-                  </div>
+                    {meta.error && meta.touched && <ErrorMessage>{meta.error}</ErrorMessage>}
+                  </Container>
                 )}
               </Field>
-
-              <button type="submit" disabled={submitting || pristine}>
-                Submit
-              </button>
+              <Row justify="center">
+                <Button type="primary" htmlType="submit" disabled={submitting}>
+                  {t('contact.submit')}
+                </Button>
+              </Row>
             </form>
           )}
         />
