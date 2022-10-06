@@ -10,6 +10,13 @@ import * as Styled from './Contact.styles';
 import { Row } from 'antd';
 import { Button } from 'components/Button';
 
+type ErrorType = {
+  firstName?: string;
+  lastName?: string;
+  eMail?: string;
+  phone?: string;
+};
+
 export const Contact = () => {
   const { t } = useTranslation();
   const formRef = useRef<HTMLFormElement>();
@@ -41,34 +48,29 @@ export const Contact = () => {
         <Form
           onSubmit={onFinish}
           validate={(values) => {
-            const errors = {};
+            const errors: ErrorType = {};
             if (!values.firstName) {
-              // @ts-ignore
               errors.firstName = `${t('contact.firstName')} is required`;
             }
             if (!values.lastName) {
-              // @ts-ignore
               errors.lastName = `${t('contact.lastName')} is required`;
             }
             if (!values.eMail) {
-              // @ts-ignore
               errors.eMail = `${t('contact.eMail')} is required`;
             }
             if (!values.phone) {
-              // @ts-ignore
               errors.phone = `${t('contact.phone')} is required`;
             }
-
             return errors;
           }}
-          render={({ handleSubmit, submitting }) => (
+          render={({ handleSubmit, submitting, form }) => (
             // @ts-ignore
             <form onSubmit={handleSubmit} ref={formRef}>
               <Field name="firstName">
                 {({ input, meta }) => (
                   <Container>
                     <Label>{t('contact.firstName')}</Label>
-                    <Input {...input} type="text" placeholder={t('contact.firstName')} />
+                    <Input {...input} type="text" placeholder={t('contact.firstName')} $error={meta.error} />
                     {meta.error && meta.touched ? <ErrorMessage>{meta.error}</ErrorMessage> : ''}
                   </Container>
                 )}
@@ -77,7 +79,7 @@ export const Contact = () => {
                 {({ input, meta }) => (
                   <Container>
                     <Label>{t('contact.lastName')}</Label>
-                    <Input {...input} type="text" placeholder={t('contact.lastName')} />
+                    <Input {...input} type="text" placeholder={t('contact.lastName')} $error={meta.error} />
                     {meta.error && meta.touched && <ErrorMessage>{meta.error}</ErrorMessage>}
                   </Container>
                 )}
@@ -86,7 +88,7 @@ export const Contact = () => {
                 {({ input, meta }) => (
                   <Container>
                     <Label>{t('contact.email')}</Label>
-                    <Input {...input} type="text" placeholder={t('contact.email')} />
+                    <Input {...input} type="text" placeholder={t('contact.email')} $error={meta.error} />
                     {meta.error && meta.touched && <ErrorMessage>{meta.error}</ErrorMessage>}
                   </Container>
                 )}
@@ -95,7 +97,7 @@ export const Contact = () => {
                 {({ input, meta }) => (
                   <Container>
                     <Label>{t('contact.phone')}</Label>
-                    <Input {...input} type="text" placeholder={t('contact.phone')} />
+                    <Input {...input} type="text" placeholder={t('contact.phone')} $error={meta.error} />
                     {meta.error && meta.touched && <ErrorMessage>{meta.error}</ErrorMessage>}
                   </Container>
                 )}
@@ -104,13 +106,13 @@ export const Contact = () => {
                 {({ input, meta }) => (
                   <Container>
                     <Label>{t('contact.message')}</Label>
-                    <Textarea {...input} placeholder={t('contact.messagePlaceholder')} />
+                    <Textarea {...input} placeholder={t('contact.messagePlaceholder')} $error={meta.error} />
                     {meta.error && meta.touched && <ErrorMessage>{meta.error}</ErrorMessage>}
                   </Container>
                 )}
               </Field>
               <Row justify="center">
-                <Button type="primary" htmlType="submit" disabled={submitting}>
+                <Button type="primary" htmlType="submit" disabled={submitting} onClick={() => form.reset()}>
                   {t('contact.submit')}
                 </Button>
               </Row>

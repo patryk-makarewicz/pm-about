@@ -1,5 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { colors, fontSize } from 'styles';
+
+type FormProps = {
+  $error: boolean;
+};
 
 export const Container = styled.div`
   position: relative;
@@ -7,6 +11,8 @@ export const Container = styled.div`
 
 export const ErrorMessage = styled.span`
   position: absolute;
+  left: 0;
+  bottom: 0;
   font-size: ${fontSize.s};
   color: ${colors.warning};
 `;
@@ -15,7 +21,7 @@ export const Label = styled.label`
   font-size: ${fontSize.s};
 `;
 
-export const Input = styled.input`
+export const Input = styled.input<FormProps>`
   box-shadow: inset 0px 0px 10px -6px rgba(66, 68, 90, 1);
   margin: 0 0 20px 0;
   width: 100%;
@@ -24,6 +30,11 @@ export const Input = styled.input`
   font-size: ${fontSize.s};
   border: 1px solid #cccbcb;
   border-radius: 10px;
+  ${({ $error = false }) =>
+    $error &&
+    css`
+      border: 1px solid ${colors.warning};
+    `}
 
   &:focus {
     outline-style: inherit;
@@ -31,7 +42,7 @@ export const Input = styled.input`
   }
 `;
 
-export const Textarea = styled.textarea`
+export const Textarea = styled.textarea<FormProps>`
   box-shadow: inset 0px 0px 10px -6px rgba(66, 68, 90, 1);
   margin: 0 0 20px 0;
   width: 100%;
@@ -40,6 +51,11 @@ export const Textarea = styled.textarea`
   font-size: ${fontSize.s};
   border: 1px solid #cccbcb;
   border-radius: 10px;
+  ${({ $error = false }) =>
+    $error &&
+    css`
+      border: 1px solid ${colors.warning};
+    `}
 
   &:focus {
     outline-style: inherit;
