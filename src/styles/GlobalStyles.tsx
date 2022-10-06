@@ -40,6 +40,22 @@ a {
   --background-secondary-color: #2b2f34;
   --border-color: #242424;
 }
+
+ /* Change autocomplete styles in WebKit */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+   /* border: 1px solid var(--color-white); */
+    /* -webkit-text-fill-color: white; */
+    /* box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset; */
+    transition: background-color 5000s ease-in-out 0s;
+}
 `;
 
 export default GlobalStyles;
