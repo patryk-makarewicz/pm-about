@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Form, Field } from 'react-final-form';
-import { useForm, SubmitHandler } from 'react-hook-form';
+
+import { useForm } from 'react-hook-form';
 
 import { SocialMedia } from 'components/SocialMedia/SocialMedia';
 import { Container, ErrorMessage, Input, Label, Textarea } from 'components/Form';
@@ -13,8 +13,10 @@ import { Button } from 'components/Button';
 
 type Inputs = {
   firstName: string;
-  example: string;
-  exampleRequired: string;
+  lastName: string;
+  email: string;
+  phone: number;
+  message: string;
 };
 
 export const Contact = () => {
@@ -23,13 +25,8 @@ export const Contact = () => {
     register,
     handleSubmit,
     reset,
-    watch,
     formState: { errors }
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
-
-  console.log(watch('example'));
-
   const formRef = useRef<HTMLFormElement>(null);
 
   const sendEmail = () => {
@@ -47,8 +44,6 @@ export const Contact = () => {
     );
   };
 
-  const onFinish = () => {};
-
   return (
     <div id="contact">
       <Styled.SectionTitle>{t('contact.title')}</Styled.SectionTitle>
@@ -59,73 +54,82 @@ export const Contact = () => {
             <Label htmlFor="firstName">{t('contact.firstName')}</Label>
             <Input
               {...register('firstName', {
-                required: true,
-                pattern: /^[A-Za-z]+$/i
+                required: true
               })}
               maxLength={70}
-              defaultValue=""
               id="firstName"
               type="text"
               name="firstName"
               placeholder={t('contact.firstName')}
               $error={!!errors.firstName}
             />
-            {errors.firstName && (
-              <ErrorMessage>
-                {t('contact.firstName')} {t('contact.isRequired')}
-              </ErrorMessage>
-            )}
+            {errors.firstName && <ErrorMessage>{t('contact.isRequired')}</ErrorMessage>}
           </Container>
-
+          <Container>
+            <Label htmlFor="lastName">{t('contact.lastName')}</Label>
+            <Input
+              {...register('lastName', {
+                required: true
+              })}
+              maxLength={70}
+              defaultValue=""
+              id="lastName"
+              type="text"
+              name="lastName"
+              placeholder={t('contact.lastName')}
+              $error={!!errors.lastName}
+            />
+            {errors.lastName && <ErrorMessage>{t('contact.isRequired')}</ErrorMessage>}
+          </Container>
+          <Container>
+            <Label htmlFor="email">{t('contact.email')}</Label>
+            <Input
+              {...register('email', {
+                required: true
+              })}
+              maxLength={70}
+              id="email"
+              type="email"
+              name="email"
+              placeholder={t('contact.email')}
+              $error={!!errors.email}
+            />
+            {errors.email && <ErrorMessage>{t('contact.isRequired')}</ErrorMessage>}
+          </Container>
+          <Container>
+            <Label htmlFor="phone">{t('contact.phone')}</Label>
+            <Input
+              {...register('phone', {
+                required: true
+              })}
+              maxLength={70}
+              id="phone"
+              type="tel"
+              name="phone"
+              placeholder={t('contact.phone')}
+              $error={!!errors.phone}
+            />
+            {errors.phone && <ErrorMessage>{t('contact.isRequired')}</ErrorMessage>}
+          </Container>
+          <Container>
+            <Label htmlFor="message">{t('contact.message')}</Label>
+            <Textarea
+              {...register('message', {
+                required: false
+              })}
+              maxLength={1000}
+              id="message"
+              name="message"
+              placeholder={t('contact.message')}
+              $error={!!errors.message}
+            />
+          </Container>
           <Row justify="center">
             <Button type="primary" htmlType="submit">
               {t('contact.submit')}
             </Button>
           </Row>
         </form>
-        <Form
-          onSubmit={onFinish}
-          render={({ submitting, form }) => (
-            <form>
-              <Field name="lastName">
-                {({ input, meta }) => (
-                  <Container>
-                    <Label>{t('contact.lastName')}</Label>
-                    <Input {...input} type="text" placeholder={t('contact.lastName')} $error={meta.error} />
-                    {meta.error && meta.touched && <ErrorMessage>{meta.error}</ErrorMessage>}
-                  </Container>
-                )}
-              </Field>
-              <Field name="eMail">
-                {({ input, meta }) => (
-                  <Container>
-                    <Label>{t('contact.email')}</Label>
-                    <Input {...input} type="text" placeholder={t('contact.email')} $error={meta.error} />
-                    {meta.error && meta.touched && <ErrorMessage>{meta.error}</ErrorMessage>}
-                  </Container>
-                )}
-              </Field>
-              <Field name="phone">
-                {({ input, meta }) => (
-                  <Container>
-                    <Label>{t('contact.phone')}</Label>
-                    <Input {...input} type="text" placeholder={t('contact.phone')} $error={meta.error} />
-                    {meta.error && meta.touched && <ErrorMessage>{meta.error}</ErrorMessage>}
-                  </Container>
-                )}
-              </Field>
-              <Field name="message">
-                {({ input, meta }) => (
-                  <Container>
-                    <Label>{t('contact.message')}</Label>
-                    <Textarea {...input} placeholder={t('contact.messagePlaceholder')} $error={meta.error} />
-                    {meta.error && meta.touched && <ErrorMessage>{meta.error}</ErrorMessage>}
-                  </Container>
-                )}
-              </Field>
-            </form>
-          )}
-        />
       </Styled.FormBox>
       <SocialMedia />
     </div>
