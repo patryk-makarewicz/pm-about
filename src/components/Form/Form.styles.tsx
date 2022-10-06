@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { colors, fontSize } from 'styles';
 
 type FormProps = {
-  $error: boolean;
+  $error?: boolean;
 };
 
 export const Container = styled.div`
