@@ -1,10 +1,10 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { useForm } from 'react-hook-form';
 
 import { SocialMedia } from 'components/SocialMedia/SocialMedia';
-import { Container, ErrorMessage, Input, Label, Textarea } from 'components/Form';
+import { Container, ErrorMessage, Input, Label, Textarea, SentMessage } from 'components/Form';
 import emailjs from '@emailjs/browser';
 
 import * as Styled from './Contact.styles';
@@ -28,21 +28,36 @@ export const Contact = () => {
     formState: { errors }
   } = useForm<Inputs>();
   const formRef = useRef<HTMLFormElement>(null);
+  const [sendingStatus, setSendingStatus] = useState(false);
+  const [okStatus, setOkStatus] = useState<string | null>(null);
 
   const sendEmail = () => {
     const currentForm = formRef.current;
-    if (currentForm == null) return;
+    if (currentForm === null) return;
+    setSendingStatus(true);
 
     emailjs.sendForm('service_jmouk4o', 'template_q8cy5fy', currentForm, 'kHbfVc7i6W4XME0Lz').then(
       (result) => {
-        console.log(result.text);
+        console.log(`Send status: ${result.text}`);
+        setSendingStatus(false);
+        setOkStatus('OK');
         reset();
       },
       (error) => {
         console.log(error.text);
+        setSendingStatus(false);
+        setOkStatus(null);
       }
     );
   };
+
+  useEffect(() => {
+    if (okStatus === 'OK') {
+      setTimeout(() => {
+        setOkStatus(null);
+      }, 5000);
+    }
+  }, [okStatus]);
 
   return (
     <div id="contact">
@@ -120,16 +135,17 @@ export const Contact = () => {
               maxLength={1000}
               id="message"
               name="message"
-              placeholder={t('contact.message')}
+              placeholder={t('contact.messagePlaceholder')}
               $error={!!errors.message}
             />
           </Container>
           <Row justify="center">
-            <Button type="primary" htmlType="submit">
+            <Button type="primary" htmlType="submit" loading={sendingStatus}>
               {t('contact.submit')}
             </Button>
           </Row>
         </form>
+        {okStatus === 'OK' && <SentMessage>{t('contact.sent')}</SentMessage>}
       </Styled.FormBox>
       <SocialMedia />
     </div>

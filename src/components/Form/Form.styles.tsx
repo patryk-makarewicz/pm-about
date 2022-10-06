@@ -17,6 +17,17 @@ export const ErrorMessage = styled.span`
   color: ${colors.warning};
 `;
 
+export const SentMessage = styled(ErrorMessage)`
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: -30px;
+  text-align: center;
+  color: ${colors.green};
+  font-weight: 600;
+`;
+
 export const Label = styled.label`
   font-size: ${fontSize.s};
 `;
@@ -26,7 +37,7 @@ const baseFieldsStyles = css`
   margin: 0 0 20px 0;
   width: 100%;
   font-size: ${fontSize.s};
-  border: 1px solid #cccbcb;
+  border: 1px solid ${colors.gray2};
   border-radius: 10px;
 
   &:focus {

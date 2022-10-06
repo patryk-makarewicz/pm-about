@@ -34,6 +34,7 @@
     "message": "Message",
     "messagePlaceholder": "Your message...",
     "submit": "Submit",
-    "isRequired": "This field is required!"
+    "isRequired": "This field is required!",
+    "sent": "Your message has been sent successfully"
   }
 }
