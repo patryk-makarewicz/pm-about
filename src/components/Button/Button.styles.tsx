@@ -8,6 +8,11 @@ interface ButtonProps {
 }
 
 export const Button: typeof AntdButton = styled(AntdButton)<ButtonProps>`
+  &&&,
+  &.ant-btn {
+    border-radius: 6px;
+  }
+
   &&&.ant-btn-text {
     ${({ $textColor }) =>
       $textColor &&
