@@ -20,6 +20,13 @@ body {
   color: #242424;
   background-color: #ffffff;
   font-size: 16px;
+  input,
+  textarea,
+  button,
+  select,
+  a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
 }
 
 a {
