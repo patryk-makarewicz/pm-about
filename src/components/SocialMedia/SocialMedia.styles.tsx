@@ -1,13 +1,24 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { shadow } from 'styles/variables';
 
-export const ButtonIcon = styled.a`
+type SocialMediaType = {
+  $white?: boolean;
+};
+
+export const ButtonIcon = styled.a<SocialMediaType>`
   display: flex;
   align-items: center;
   justify-content: center;
   width: 44px;
   height: 44px;
-  background-color: var(--background-color);
+  ${({ $white }) =>
+    $white
+      ? css`
+          background-color: #ffffff;
+        `
+      : css`
+          background-color: var(--background-color);
+        `}
   border-radius: 50%;
   box-shadow: ${shadow.first};
   transition: all 0.2s ease-in-out;

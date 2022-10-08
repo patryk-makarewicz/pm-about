@@ -147,7 +147,7 @@ export const Contact = () => {
         </form>
         {okStatus === 'OK' && <SentMessage>{t('contact.sent')}</SentMessage>}
       </Styled.FormBox>
-      <SocialMedia />
+      <SocialMedia $white />
     </div>
   );
 };
