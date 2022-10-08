@@ -36,5 +36,11 @@
     "submit": "Submit",
     "isRequired": "This field is required!",
     "sent": "Your message has been sent successfully"
+  },
+
+  "cookie": {
+    "text": "By clicking Accept, you consent to our use of cookies. ",
+    "textButton": "Website regulations.",
+    "button": "Accept"
   }
 }

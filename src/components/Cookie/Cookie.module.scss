@@ -1,0 +1,27 @@
+.cookie {
+  &__buttonClose {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #242424;
+    background-color: inherit;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+  }
+
+  &__buttonTerm {
+    @extend .cookie__buttonClose;
+
+    position: inherit;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 600;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

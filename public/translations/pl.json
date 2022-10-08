@@ -36,5 +36,11 @@
     "submit": "Wyślij",
     "isRequired": "To pole jest wymagane!",
     "sent": "Twoja wiadomość została wysłana pomyślnie"
+  },
+
+  "cookie": {
+    "text": "Klikając Akceptuj, wyrażają Państwo zgodę na używanie przez nas plików cookie. ",
+    "textButton": "Regulamin serwisu.",
+    "button": "Akceptuj"
   }
 }
