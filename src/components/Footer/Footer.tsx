@@ -23,11 +23,17 @@ export const Footer = ({ onHandleShowTerms, onHandleShowPrivacy }: FooterType) =
         <Divider type="vertical" style={{ height: '20px', margin: '0 20px' }} />
         <Styled.Text>{t('footer.copyright', { year: year })}</Styled.Text>
         <Divider type="vertical" style={{ height: '20px', margin: '0 20px' }} />
-        <Button type="text" style={{ paddingLeft: 0, paddingRight: 0 }} onClick={onHandleShowTerms}>
+        <Button
+          type="text"
+          style={{ paddingLeft: 0, paddingRight: 0, color: 'var(--text-color)' }}
+          onClick={onHandleShowTerms}>
           {t('footer.terms')}
         </Button>
         <Divider type="vertical" style={{ height: '20px', margin: '0 20px' }} />
-        <Button type="text" style={{ paddingLeft: 0, paddingRight: 0 }} onClick={onHandleShowPrivacy}>
+        <Button
+          type="text"
+          style={{ paddingLeft: 0, paddingRight: 0, color: 'var(--text-color)' }}
+          onClick={onHandleShowPrivacy}>
           {t('footer.privacy')}
         </Button>
       </Styled.Wrapper>
