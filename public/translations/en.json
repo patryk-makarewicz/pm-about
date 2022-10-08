@@ -9,7 +9,9 @@
     "contact": "Contact"
   },
   "footer": {
-    "copyright": "Copyright Ⓒ {{year}} makaDev Patryk Makarewicz"
+    "copyright": "Copyright Ⓒ {{year}} makaDev Patryk Makarewicz",
+    "privacy": "Privacy policy",
+    "terms": "Terms of service"
   },
   "greeting": {
     "hi": "Hi there!",
