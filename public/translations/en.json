@@ -44,5 +44,13 @@
     "text": "By clicking Accept, you consent to our use of cookies. ",
     "textButton": "Website regulations.",
     "button": "Accept"
+  },
+  "messages": {
+    "fail": {
+      "generic": "Failed to download projects"
+    },
+    "success": {
+      "generic": "Successfully"
+    }
   }
 }

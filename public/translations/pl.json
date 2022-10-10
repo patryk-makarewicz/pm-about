@@ -44,5 +44,13 @@
     "text": "Klikając Akceptuj, wyrażają Państwo zgodę na używanie przez nas plików cookie. ",
     "textButton": "Regulamin serwisu.",
     "button": "Akceptuj"
+  },
+  "messages": {
+    "fail": {
+      "generic": "Nie udało się pobrać projektów"
+    },
+    "success": {
+      "generic": "Sukces"
+    }
   }
 }
