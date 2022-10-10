@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import * as Styled from './Projects.styles';
 import React from 'react';
 import { useRepoList } from 'hooks/useRepoList';
+import { SingleRepoModel } from 'api/RepoAPI/Repo.model';
 
 const contentStyle: React.CSSProperties = {
   height: '160px',
@@ -23,20 +24,15 @@ export const Projects = () => {
     <div id="projects">
       <Styled.SectionTitle>{t('projects.title')}</Styled.SectionTitle>
       <Styled.Paragraph>{t('projects.description')}</Styled.Paragraph>
-      <Carousel autoplay>
-        <div>
-          <h3 style={contentStyle}>1</h3>
-        </div>
-        <div>
-          <h3 style={contentStyle}>2</h3>
-        </div>
-        <div>
-          <h3 style={contentStyle}>3</h3>
-        </div>
-        <div>
-          <h3 style={contentStyle}>4</h3>
-        </div>
-      </Carousel>
+      <Styled.CarouselContainer>
+        <Carousel autoplay>
+          {repoList.map((repo: SingleRepoModel) => (
+            <div key={repo.id}>
+              <h3 style={contentStyle}>{repo.name}</h3>
+            </div>
+          ))}
+        </Carousel>
+      </Styled.CarouselContainer>
     </div>
   );
 };
