@@ -4,12 +4,13 @@ import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useQuery } from 'react-query';
 
-export const useRepoList = () => {
+export const useRepoList = (enabled: boolean) => {
   const { t } = useTranslation();
   const [initialLoading, setInitialLoading] = useState(true);
 
   const { data, isLoading, isError, isSuccess, refetch } = useQuery<any>([QueryKey.loadRepoList], RepoAPI.getRepoList, {
     refetchOnWindowFocus: false,
+    enabled,
     onSettled: () => {
       setInitialLoading(false);
     },

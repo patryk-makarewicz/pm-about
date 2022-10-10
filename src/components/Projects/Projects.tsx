@@ -15,7 +15,7 @@ const contentStyle: React.CSSProperties = {
 export const Projects = () => {
   const { t } = useTranslation();
 
-  const { data: repoList } = useRepoList();
+  const { data: repoList } = useRepoList(true);
 
   console.log(repoList);
 
