@@ -5,12 +5,16 @@ import reportWebVitals from './reportWebVitals';
 import { App } from 'components/App';
 import { RecoilRoot } from 'recoil';
 import './i18n';
+import { QueryClientProvider } from 'react-query';
+import { queryClient } from 'api';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
     <RecoilRoot>
-      <App />
+      <QueryClientProvider client={queryClient}>
+        <App />
+      </QueryClientProvider>
     </RecoilRoot>
   </React.StrictMode>
 );

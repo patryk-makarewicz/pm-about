@@ -2,6 +2,7 @@ import { Carousel } from 'antd';
 import { useTranslation } from 'react-i18next';
 import * as Styled from './Projects.styles';
 import React from 'react';
+import { useRepoList } from 'hooks/useRepoList';
 
 const contentStyle: React.CSSProperties = {
   height: '160px',
@@ -13,6 +14,10 @@ const contentStyle: React.CSSProperties = {
 
 export const Projects = () => {
   const { t } = useTranslation();
+
+  const { data: repoList } = useRepoList();
+
+  console.log(repoList);
 
   return (
     <div id="projects">
