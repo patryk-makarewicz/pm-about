@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { useRecoilValue, useSetRecoilState } from 'recoil';
-import { modeState } from '../../state/appState';
+import { useRecoilValue } from 'recoil';
+import { modeState } from 'state/appState';
+import { useModeLocalStorage } from 'hooks/useModeLocalStorage';
 
 import { useTranslation } from 'react-i18next';
 import { Anchor, Button, Switch } from 'antd';
@@ -8,9 +9,9 @@ import { Anchor, Button, Switch } from 'antd';
 import { ReactComponent as FlagPl } from '../../assets/flag_poland.svg';
 import { ReactComponent as ModeDark } from '../../assets/mode_dark.svg';
 import { ReactComponent as ModeLight } from '../../assets/mode_light.svg';
+import { Logo } from 'Utils/logo';
 import FlagEn from '../../assets/flag_en.png';
 import * as Styled from './Header.styles';
-import { Logo } from 'Utils/logo';
 
 const { Link } = Anchor;
 
@@ -18,15 +19,12 @@ export const Header = () => {
   const { t } = useTranslation();
   const { i18n } = useTranslation();
   const mode = useRecoilValue(modeState);
-  const setMode = useSetRecoilState(modeState);
+  const { onChangeMode } = useModeLocalStorage();
+
   const [language, setLanguage] = useState('en');
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
     setLanguage(lng);
-  };
-
-  const onChangeMode = () => {
-    setMode((prev) => !prev);
   };
 
   const onChangeLanguage = () => {
