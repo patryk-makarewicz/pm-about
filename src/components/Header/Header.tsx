@@ -55,10 +55,8 @@ export const Header = () => {
     <>
       <Styled.Config id="about">
         <Styled.InnerWrapper $justifyEnd>
-          <Styled.Text>{t('mode')}</Styled.Text>
           <Switch checked={mode} onChange={onChangeMode} size="small" style={{ margin: '0 10px' }} />
           {renderMode()}
-          <Styled.Text>{t('language')}</Styled.Text>
           <Button type="text" onClick={onChangeLanguage}>
             {renderFlag()}
           </Button>

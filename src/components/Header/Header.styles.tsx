@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Anchor as AntdAnchor } from 'antd';
 import { colors } from '../../styles/colors';
-import { fontSize, shadow } from '../../styles/variables';
+import { shadow } from '../../styles/variables';
 
 interface InnerWrapperProps {
   $justifyEnd?: boolean;
@@ -50,10 +50,4 @@ export const Anchor = styled(AntdAnchor)`
   .ant-anchor-link-active > .ant-anchor-link-title {
     color: ${colors.green};
   }
-`;
-
-export const Text = styled.p`
-  color: var(--text-color);
-  font-size: ${fontSize.s};
-  margin: 0;
 `;
