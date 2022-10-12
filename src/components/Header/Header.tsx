@@ -45,9 +45,9 @@ export const Header = () => {
 
   const renderMode = () => {
     if (mode) {
-      return <ModeDark style={{ marginRight: '20px' }} />;
+      return <ModeDark />;
     } else {
-      return <ModeLight style={{ marginRight: '20px' }} />;
+      return <ModeLight />;
     }
   };
 
