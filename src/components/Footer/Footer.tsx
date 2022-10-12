@@ -1,4 +1,3 @@
-import { Divider } from 'antd';
 import { Button } from 'components/Button';
 import { useTranslation } from 'react-i18next';
 import { Logo } from 'Utils/logo';
@@ -19,17 +18,17 @@ export const Footer = ({ onHandleShowTerms, onHandleShowPrivacy }: FooterType) =
   return (
     <Styled.Footer>
       <Styled.Wrapper>
-        {Logo()}
-        <Divider type="vertical" style={{ height: '20px', margin: '0 20px' }} />
+        <Styled.LogoWrapper>{Logo()}</Styled.LogoWrapper>
+        <Styled.Divider type="vertical" />
         <Styled.Text>{t('footer.copyright', { year: year })}</Styled.Text>
-        <Divider type="vertical" style={{ height: '20px', margin: '0 20px' }} />
+        <Styled.Divider type="vertical" />
         <Button
           type="text"
           style={{ paddingLeft: 0, paddingRight: 0, color: 'var(--text-color)' }}
           onClick={onHandleShowTerms}>
           {t('footer.terms')}
         </Button>
-        <Divider type="vertical" style={{ height: '20px', margin: '0 20px' }} />
+        <Styled.Divider type="vertical" />
         <Button
           type="text"
           style={{ paddingLeft: 0, paddingRight: 0, color: 'var(--text-color)' }}
