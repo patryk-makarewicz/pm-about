@@ -4,14 +4,11 @@ import { fontSize, margin } from 'styles/variables';
 import { colors } from 'styles';
 
 export const ItemContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 160px;
-  color: #fff;
+  height: 200px;
+  color: ${colors.dark};
   line-height: 160px;
   text-align: center;
-  background: ${colors.gray2};
+  background: ${colors.gray};
 `;
 
 export const Carousel: typeof AntdCarousel = styled(AntdCarousel)`
