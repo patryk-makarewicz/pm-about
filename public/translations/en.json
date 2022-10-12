@@ -24,7 +24,10 @@
   },
   "projects": {
     "title": "Projects",
-    "description": "I want to show you some of my projects that I have completed in my spare time, unfortunately I cannot boast of commercial projects."
+    "description": "I want to show you some of my projects that I have completed in my spare time, unfortunately I cannot boast of commercial projects.",
+    "project": "Project",
+    "projectDescription": "Description",
+    "projectTags": "Tags"
   },
   "contact": {
     "title": "Contact",

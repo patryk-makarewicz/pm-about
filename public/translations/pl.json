@@ -24,7 +24,10 @@
   },
   "projects": {
     "title": "Projekty",
-    "description": "Chcę Ci pokazać niektóre z moich projektów które zrealizowałem w wolnym czasie, niestety nie mogę pochwalić się projektami komercyjnymi."
+    "description": "Chcę Ci pokazać niektóre z moich projektów które zrealizowałem w wolnym czasie, niestety nie mogę pochwalić się projektami komercyjnymi.",
+    "project": "Projekt",
+    "projectDescription": "Opis",
+    "projectTags": "Tagi"
   },
   "contact": {
     "title": "Kontakt",

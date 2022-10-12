@@ -1,37 +1,33 @@
-import { Carousel } from 'antd';
 import { useTranslation } from 'react-i18next';
-import * as Styled from './Projects.styles';
-import React from 'react';
 import { useRepoList } from 'hooks/useRepoList';
 import { SingleRepoModel } from 'api/RepoAPI/Repo.model';
 
-const contentStyle: React.CSSProperties = {
-  height: '160px',
-  color: '#fff',
-  lineHeight: '160px',
-  textAlign: 'center',
-  background: '#364d79'
-};
+import * as Styled from './Projects.styles';
 
 export const Projects = () => {
   const { t } = useTranslation();
-
   const { data: repoList } = useRepoList(true);
-
-  console.log(repoList);
 
   return (
     <div id="projects">
       <Styled.SectionTitle>{t('projects.title')}</Styled.SectionTitle>
       <Styled.Paragraph>{t('projects.description')}</Styled.Paragraph>
       <Styled.CarouselContainer>
-        <Carousel autoplay>
+        <Styled.Carousel autoplay>
           {repoList.map((repo: SingleRepoModel) => (
-            <div key={repo.id}>
-              <h3 style={contentStyle}>{repo.name}</h3>
-            </div>
+            <Styled.ItemContainer key={repo.id}>
+              <p style={{ height: '10px', marginTop: '-35px' }}>
+                {t('projects.project')}: {repo.name}
+              </p>
+              <p style={{ height: '10px' }}>
+                {t('projects.projectDescription')}: {repo.description}
+              </p>
+              <p>
+                {t('projects.projectTags')}: {repo.topics.map((tag) => tag)}
+              </p>
+            </Styled.ItemContainer>
           ))}
-        </Carousel>
+        </Styled.Carousel>
       </Styled.CarouselContainer>
     </div>
   );

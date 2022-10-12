@@ -1,5 +1,27 @@
 import styled from 'styled-components';
+import { Carousel as AntdCarousel } from 'antd';
 import { fontSize, margin } from 'styles/variables';
+import { colors } from 'styles';
+
+export const ItemContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160px;
+  color: #fff;
+  line-height: 160px;
+  text-align: center;
+  background: ${colors.gray2};
+`;
+
+export const Carousel: typeof AntdCarousel = styled(AntdCarousel)`
+  .slick-dots > li > button {
+    background-color: ${colors.green};
+  }
+  .slick-dots > li.slick-active > button {
+    background-color: ${colors.green};
+  }
+`;
 
 export const CarouselContainer = styled.div`
   max-width: 500px;
