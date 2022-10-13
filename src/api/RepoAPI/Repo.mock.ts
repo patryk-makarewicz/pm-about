@@ -7,8 +7,11 @@ export const createRepoListMock = () => {
       id: 1,
       name: 'Repo_name',
       description: 'Description',
-      homepage: 'URL_homepage',
       html_url: 'URL_html',
+      owner: {
+        avatar_url: 'URL_avatar',
+        html_url: 'URL_Github'
+      },
       topics: ['react', 'recoil', 'typescript']
     }
   ]);
