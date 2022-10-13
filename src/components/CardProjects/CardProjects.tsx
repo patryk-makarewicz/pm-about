@@ -1,6 +1,7 @@
-import { ReactComponent as Github } from '../../assets/github.svg';
-import { Avatar, Card, Tag } from 'antd';
+import { Avatar, Tag, Card, CardProps } from 'antd';
 import * as Styled from './CardProjects.styles';
+import { BranchesOutlined, CodeOutlined } from '@ant-design/icons';
+import { Button } from 'components/Button';
 
 const { Meta } = Card;
 
@@ -13,17 +14,20 @@ type CardProjectsProps = {
   urlCode: string;
 };
 
-export const CardProjects = ({ avatar, title, description, tags, urlGithub, urlCode }: CardProjectsProps) => (
+type Props = CardProjectsProps & CardProps;
+
+export const CardProjects = ({ avatar, title, description, tags, urlGithub, urlCode, ...props }: Props) => (
   <Card
+    {...props}
     style={{ width: '100%' }}
     cover={<img alt="Project cover" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />}
     actions={[
-      <a href={urlGithub} target="_blank">
-        <Github width={25} height={25} key="github" />
-      </a>,
-      <a href={urlCode} target="_blank">
-        <Github width={25} height={25} key="github" />
-      </a>
+      <Button type="link" href={urlGithub} target="_blank" disabled={props.loading}>
+        <BranchesOutlined style={{ fontSize: '20px' }} />
+      </Button>,
+      <Button type="link" href={urlCode} target="_blank" disabled={props.loading}>
+        <CodeOutlined style={{ fontSize: '20px' }} />
+      </Button>
     ]}>
     <Meta avatar={<Avatar src={avatar} />} title={title} description={description} />
     <Styled.TagContainer>

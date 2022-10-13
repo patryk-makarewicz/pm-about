@@ -19,6 +19,7 @@ export const Projects = () => {
       <Styled.CardContainer>
         {repoList.map((repo: SingleRepoModel) => (
           <CardProjects
+            loading={repoList.length === 0}
             key={repo.id}
             avatar={repo.owner.avatar_url}
             title={repo.name}
