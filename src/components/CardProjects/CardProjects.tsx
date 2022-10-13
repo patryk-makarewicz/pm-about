@@ -1,7 +1,7 @@
 import { Avatar, Tag, Card, CardProps } from 'antd';
-import * as Styled from './CardProjects.styles';
-import { BranchesOutlined, CodeOutlined } from '@ant-design/icons';
 import { Button } from 'components/Button';
+import { BranchesOutlined, CodeOutlined } from '@ant-design/icons';
+import * as Styled from './CardProjects.styles';
 
 const { Meta } = Card;
 
@@ -22,10 +22,10 @@ export const CardProjects = ({ avatar, title, description, tags, urlGithub, urlC
     style={{ width: '100%' }}
     cover={<img alt="Project cover" src={`${process.env.PUBLIC_URL}/assets/project_cover.jpg`} />}
     actions={[
-      <Button type="text" href={urlGithub} target="_blank" disabled={props.loading}>
+      <Button type="text" href={urlGithub} target="_blank">
         <BranchesOutlined style={{ fontSize: '20px' }} />
       </Button>,
-      <Button type="text" href={urlCode} target="_blank" disabled={props.loading}>
+      <Button type="text" href={urlCode} target="_blank">
         <CodeOutlined style={{ fontSize: '22px' }} />
       </Button>
     ]}>

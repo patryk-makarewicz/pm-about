@@ -9,26 +9,20 @@ export const useRepoList = (enabled: boolean) => {
   const { t } = useTranslation();
   const [initialLoading, setInitialLoading] = useState(true);
 
-  const { data, isLoading, isError, isSuccess, refetch } = useQuery<RepoListModel>(
-    [QueryKey.loadRepoList],
-    RepoAPI.getRepoList,
-    {
-      refetchOnWindowFocus: false,
-      enabled,
-      onSettled: () => {
-        setInitialLoading(false);
-      },
-      onError: () => {
-        message.error(t('messages.fail.generic'));
-      }
+  const { data, isLoading, isError } = useQuery<RepoListModel>([QueryKey.loadRepoList], RepoAPI.getRepoList, {
+    refetchOnWindowFocus: false,
+    enabled,
+    onSettled: () => {
+      setInitialLoading(false);
+    },
+    onError: () => {
+      message.error(t('messages.fail.generic'));
     }
-  );
+  });
 
   return {
     data: useMemo(() => (data ? data : []), [data]),
     isLoading: isLoading || initialLoading,
-    isError,
-    isSuccess,
-    refetch
+    isError
   };
 };
