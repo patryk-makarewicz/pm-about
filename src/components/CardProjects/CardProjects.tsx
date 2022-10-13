@@ -20,13 +20,13 @@ export const CardProjects = ({ avatar, title, description, tags, urlGithub, urlC
   <Card
     {...props}
     style={{ width: '100%' }}
-    cover={<img alt="Project cover" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />}
+    cover={<img alt="Project cover" src={`${process.env.PUBLIC_URL}/assets/project_cover.jpg`} />}
     actions={[
-      <Button type="link" href={urlGithub} target="_blank" disabled={props.loading}>
+      <Button type="text" href={urlGithub} target="_blank" disabled={props.loading}>
         <BranchesOutlined style={{ fontSize: '20px' }} />
       </Button>,
-      <Button type="link" href={urlCode} target="_blank" disabled={props.loading}>
-        <CodeOutlined style={{ fontSize: '20px' }} />
+      <Button type="text" href={urlCode} target="_blank" disabled={props.loading}>
+        <CodeOutlined style={{ fontSize: '22px' }} />
       </Button>
     ]}>
     <Meta avatar={<Avatar src={avatar} />} title={title} description={description} />

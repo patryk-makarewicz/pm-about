@@ -2,15 +2,14 @@ import { useTranslation } from 'react-i18next';
 import { useRepoList } from 'hooks/useRepoList';
 import { SingleRepoModel } from 'api/RepoAPI/Repo.model';
 
-import * as Styled from './Projects.styles';
 import { SectionTitle } from 'components/Typography/SectionTitle';
 import { CardProjects } from 'components/CardProjects';
+
+import * as Styled from './Projects.styles';
 
 export const Projects = () => {
   const { t } = useTranslation();
   const { data: repoList } = useRepoList(true);
-
-  console.log(repoList);
 
   return (
     <div id="projects">
