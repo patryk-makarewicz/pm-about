@@ -1,7 +1,5 @@
 {
   "name": "makaDev Patryk Makarewicz",
-  "mode": "Select mode:",
-  "language": "Select language:",
   "header": {
     "about": "About me",
     "tech": "Tech",
@@ -9,6 +7,51 @@
     "contact": "Contact"
   },
   "footer": {
-    "copyright": "Copyright Ⓒ {{year}} makaDev Patryk Makarewicz"
+    "copyright": "Copyright Ⓒ {{year}} makaDev Patryk Makarewicz",
+    "privacy": "Privacy policy",
+    "terms": "Terms of service"
+  },
+  "greeting": {
+    "hi": "Hi there!",
+    "dev": "My name is Patryk and I’m",
+    "devGreen": "Frontend Developer | React.",
+    "content": "You might be interested in checking the list of my skills . Don’t forget to have a glimpse at my projects. Currently I’m looking for new challenges so if you have one - contact me"
+  },
+  "technologies": {
+    "title": "Tech stack"
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "I want to show you some of my projects that I have completed in my spare time, unfortunately I cannot boast of commercial projects.",
+    "project": "Project",
+    "projectDescription": "Description",
+    "projectTags": "Tags"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "I’m open for new opportunities/cooperation. If you have something for me, we should talk",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "E-mail",
+    "phone": "Phone number",
+    "message": "Message",
+    "messagePlaceholder": "Your message...",
+    "submit": "Submit",
+    "isRequired": "This field is required!",
+    "sent": "Your message has been sent successfully"
+  },
+
+  "cookie": {
+    "text": "By clicking Accept, you consent to our use of cookies. ",
+    "textButton": "Website regulations.",
+    "button": "Accept"
+  },
+  "messages": {
+    "fail": {
+      "generic": "Failed to download projects"
+    },
+    "success": {
+      "generic": "Successfully"
+    }
   }
 }

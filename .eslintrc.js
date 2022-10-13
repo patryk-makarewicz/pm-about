@@ -27,12 +27,24 @@ module.exports = {
   },
   rules: {
     'linebreak-style': 'off',
-    'prettier/prettier': [
-      'error',
+    'prettier/prettier': ['warn', { singleQuote: true, printWidth: 120, endOfLine: 'auto' }],
+    '@typescript-eslint/no-explicit-any': 'off',
+    'react/react-in-jsx-scope': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
       {
-        endOfLine: 'auto'
+        ignoreRestSiblings: true,
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+        caughtErrorsIgnorePattern: '^_'
       }
-    ]
+    ],
+    'no-console': 'off',
+    '@typescript-eslint/no-empty-function': ['error', { allow: ['arrowFunctions'] }],
+    'no-unused-vars': 'off',
+    'react/prop-types': 'off'
   },
   ignorePatterns: ['.eslintrc.js', 'i18n.js']
 };

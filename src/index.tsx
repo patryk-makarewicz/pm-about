@@ -3,13 +3,19 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 
 import { App } from 'components/App';
+import { RecoilRoot } from 'recoil';
 import './i18n';
-import './styles/global.scss';
+import { QueryClientProvider } from 'react-query';
+import { queryClient } from 'api';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <App />
+    <RecoilRoot>
+      <QueryClientProvider client={queryClient}>
+        <App />
+      </QueryClientProvider>
+    </RecoilRoot>
   </React.StrictMode>
 );
 

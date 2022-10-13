@@ -1,21 +1,20 @@
+import { pxToRem } from './helpers';
+
 //----- Fonts -----
 
 export const fontWeight = {
-  thin: 100,
-  light: 300,
   regular: 400,
-  medium: 500,
   semiBold: 600,
   bold: 700
 };
 
 export const fontSize = {
-  xs: '12px',
-  s: '14px',
-  m: '16px',
-  l: '18px',
-  xl: '21px',
-  xll: '36px'
+  xs: `${pxToRem('12px')}`,
+  s: `${pxToRem('14px')}`,
+  m: `${pxToRem('16px')}`,
+  l: `${pxToRem('18px')}`,
+  xl: `${pxToRem('21px')}`,
+  xll: `${pxToRem('36px')}`
 };
 
 //----- Line height -----
@@ -59,4 +58,11 @@ export const breakpoint = {
   l: '992px',
   xl: '1200px',
   xll: '1400px'
+};
+
+//----- Shadows -----
+
+export const shadow = {
+  first: '0 4px 12px rgba(0, 0, 0, 0.2)',
+  second: '0px -2px 12px rgba(0, 0, 0, 0.2)'
 };
