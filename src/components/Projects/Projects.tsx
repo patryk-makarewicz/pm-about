@@ -10,13 +10,23 @@ export const Projects = () => {
   const { t } = useTranslation();
   const { data: repoList } = useRepoList(true);
 
+  console.log(repoList);
+
   return (
     <div id="projects">
       <SectionTitle title={t('projects.title')} darkMode />
       <Styled.Paragraph>{t('projects.description')}</Styled.Paragraph>
       <Styled.CardContainer>
         {repoList.map((repo: SingleRepoModel) => (
-          <CardProjects key={repo.id} title={repo.name} description={repo.description} tags={repo.topics} />
+          <CardProjects
+            key={repo.id}
+            avatar={repo.owner.avatar_url}
+            title={repo.name}
+            description={repo.description}
+            tags={repo.topics}
+            urlGithub={repo.owner.html_url}
+            urlCode={repo.html_url}
+          />
         ))}
       </Styled.CardContainer>
     </div>
