@@ -4,6 +4,7 @@ import { useRepoList } from 'hooks/useRepoList';
 import { SingleRepoModel } from 'api/RepoAPI/Repo.model';
 
 import * as Styled from './Projects.styles';
+import { SectionTitle } from 'components/Typography/SectionTitle';
 
 export const Projects = () => {
   const { t } = useTranslation();
@@ -11,7 +12,7 @@ export const Projects = () => {
 
   return (
     <div id="projects">
-      <Styled.SectionTitle>{t('projects.title')}</Styled.SectionTitle>
+      <SectionTitle title={t('projects.title')} darkMode />
       <Styled.Paragraph>{t('projects.description')}</Styled.Paragraph>
       <Styled.CarouselContainer>
         <Styled.Carousel autoplay>

@@ -1,12 +1,5 @@
 import styled from 'styled-components';
 import { Form as AntdForm } from 'antd';
-import { fontSize, margin } from 'styles/variables';
-
-export const SectionTitle = styled.h2`
-  font-size: ${fontSize.xl};
-  margin-bottom: ${margin.xl};
-  text-align: center;
-`;
 
 export const Paragraph = styled.p`
   text-align: center;

@@ -1,4 +1,5 @@
 import { Card } from 'components/Card';
+import { SectionTitle } from 'components/Typography/SectionTitle';
 import { techData } from 'helpers/tech';
 import { useTranslation } from 'react-i18next';
 
@@ -9,7 +10,7 @@ export const Tech = () => {
 
   return (
     <div id="tech">
-      <Styled.SectionTitle>{t('technologies.title')}</Styled.SectionTitle>
+      <SectionTitle title={t('technologies.title')} />
       <Styled.CardBox>
         {techData.map((tech) => (
           <Card key={tech.id} title={tech.name}>

@@ -10,6 +10,7 @@ import emailjs from '@emailjs/browser';
 import * as Styled from './Contact.styles';
 import { Row } from 'antd';
 import { Button } from 'components/Button';
+import { SectionTitle } from 'components/Typography/SectionTitle';
 
 type Inputs = {
   firstName: string;
@@ -61,7 +62,7 @@ export const Contact = () => {
 
   return (
     <div id="contact">
-      <Styled.SectionTitle>{t('contact.title')}</Styled.SectionTitle>
+      <SectionTitle title={t('contact.title')} />
       <Styled.Paragraph>{t('contact.description')}</Styled.Paragraph>
       <Styled.FormBox>
         <form onSubmit={handleSubmit(sendEmail)} ref={formRef}>
