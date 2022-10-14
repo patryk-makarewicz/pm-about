@@ -12,6 +12,7 @@ import { ReactComponent as ModeLight } from '../../assets/mode_light.svg';
 import { Logo } from 'Utils/logo';
 import FlagEn from '../../assets/flag_en.png';
 import * as Styled from './Header.styles';
+import { Hamburger } from 'components/Hamburger';
 
 const { Link } = Anchor;
 
@@ -72,6 +73,7 @@ export const Header = () => {
             <Link href="#projects" title={t('header.projects')} />
             <Link href="#contact" title={t('header.contact')} />
           </Styled.Anchor>
+          <Hamburger />
         </Styled.InnerWrapper>
       </Styled.Header>
     </>
