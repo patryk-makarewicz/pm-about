@@ -5,7 +5,7 @@ import { modeState } from 'state/appState';
 import { useModeLocalStorage } from 'hooks/useModeLocalStorage';
 
 import { useTranslation } from 'react-i18next';
-import { Anchor, Button, Switch } from 'antd';
+import { Button, Switch } from 'antd';
 
 import { ReactComponent as FlagPl } from '../../assets/flag_poland.svg';
 import { ReactComponent as ModeDark } from '../../assets/mode_dark.svg';
@@ -15,8 +15,7 @@ import FlagEn from '../../assets/flag_en.png';
 import * as Styled from './Header.styles';
 import { Hamburger } from 'components/Hamburger';
 import { useWindowSize } from 'Utils/windowSize';
-
-const { Link } = Anchor;
+import { Anchor } from 'components/Anchor';
 
 export const Header = () => {
   const { t } = useTranslation();
@@ -65,6 +64,25 @@ export const Header = () => {
     }
   };
 
+  const paths = [
+    {
+      href: '#about',
+      title: t('header.about')
+    },
+    {
+      href: '#tech',
+      title: t('header.tech')
+    },
+    {
+      href: '#projects',
+      title: t('header.projects')
+    },
+    {
+      href: '#contact',
+      title: t('header.contact')
+    }
+  ];
+
   return (
     <>
       <Styled.Config id="about">
@@ -80,23 +98,13 @@ export const Header = () => {
       <Styled.Header>
         <Styled.InnerWrapper>
           <h1 style={{ margin: 'auto 20px auto 0', display: 'flex' }}>{Logo()}</h1>
-          <Styled.Anchor affix={false} targetOffset={95}>
-            <Link href="#about" title={t('header.about')} />
-            <Link href="#tech" title={t('header.tech')} />
-            <Link href="#projects" title={t('header.projects')} />
-            <Link href="#contact" title={t('header.contact')} />
-          </Styled.Anchor>
+          <Anchor paths={paths} />
           <Hamburger showMenu={showMenu} onOpenCloseMenu={onOpenCloseMenu} />
         </Styled.InnerWrapper>
       </Styled.Header>
 
       <Styled.MobileMenu close={!showMenu}>
-        <Styled.Anchor affix={false} targetOffset={95} onClick={() => setShowMenu(false)} mobile>
-          <Link href="#about" title={t('header.about')} />
-          <Link href="#tech" title={t('header.tech')} />
-          <Link href="#projects" title={t('header.projects')} />
-          <Link href="#contact" title={t('header.contact')} />
-        </Styled.Anchor>
+        <Anchor paths={paths} onClick={() => setShowMenu(false)} mobile />
       </Styled.MobileMenu>
     </>
   );
