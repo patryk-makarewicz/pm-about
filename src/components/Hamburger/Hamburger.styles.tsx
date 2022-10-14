@@ -12,7 +12,6 @@ export const HamburgerButton = styled.button`
   border: none;
   outline: none;
   cursor: pointer;
-  z-index: 1;
 
   @media screen and (min-width: ${breakpoint.s}) {
     display: none;

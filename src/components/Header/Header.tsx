@@ -88,14 +88,14 @@ export const Header = () => {
         </Styled.InnerWrapper>
       </Styled.Header>
 
-      <Styled.DropdownMenu close={!showMenu}>
+      <Styled.MobileMenu close={!showMenu}>
         <Styled.Anchor affix={false} targetOffset={95} onClick={() => setShowMenu(false)} mobile>
           <Link href="#about" title={t('header.about')} />
           <Link href="#tech" title={t('header.tech')} />
           <Link href="#projects" title={t('header.projects')} />
           <Link href="#contact" title={t('header.contact')} />
         </Styled.Anchor>
-      </Styled.DropdownMenu>
+      </Styled.MobileMenu>
     </>
   );
 };

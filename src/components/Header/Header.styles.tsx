@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Anchor as AntdAnchor } from 'antd';
 import { colors } from '../../styles/colors';
-import { breakpoint, fontSize, shadow } from '../../styles/variables';
+import { breakpoint, fontSize, shadow, zIndex } from '../../styles/variables';
 
 type InnerWrapperProps = {
   $justifyEnd?: boolean;
@@ -21,7 +21,7 @@ export const Config = styled.div`
   height: 35px;
   border-bottom: 1px solid ${colors.green};
   background-color: var(--background-color);
-  z-index: 3;
+  z-index: ${zIndex.header};
 `;
 
 export const InnerWrapper = styled.nav<InnerWrapperProps>`
@@ -60,7 +60,7 @@ export const Header = styled.header`
   background-color: var(--background-color);
   position: sticky;
   top: 0px;
-  z-index: 3;
+  z-index: ${zIndex.header};
 `;
 
 export const Anchor = styled(AntdAnchor)<AnchorProps>`
@@ -114,7 +114,7 @@ export const Anchor = styled(AntdAnchor)<AnchorProps>`
   }
 `;
 
-export const DropdownMenu = styled.div<MenuProps>`
+export const MobileMenu = styled.div<MenuProps>`
   background-color: var(--background-color);
   color: var(--text-color);
   position: fixed;
@@ -123,7 +123,7 @@ export const DropdownMenu = styled.div<MenuProps>`
   min-width: 100%;
   min-height: 100%;
   transition: all 0.2s ease-out;
-  z-index: 2;
+  z-index: ${zIndex.mobileMenu};
   overflow: hidden;
   padding-top: 100px;
   display: flex;

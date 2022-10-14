@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { breakpoint, fontSize, shadow } from 'styles/variables';
+import { breakpoint, fontSize, shadow, zIndex } from 'styles/variables';
 import { Divider as AntdDivider } from 'antd';
 
 export const LogoWrapper = styled.div`
@@ -28,7 +28,7 @@ export const Footer = styled.footer`
   background-color: var(--background-color);
   position: relative;
   top: 0;
-  z-index: 1;
+  z-index: ${zIndex.footer};
 
   @media screen and (min-width: ${breakpoint.l}) {
     height: 60px;
