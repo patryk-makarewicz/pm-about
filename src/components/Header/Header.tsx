@@ -1,4 +1,5 @@
-import { useState } from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect, useState } from 'react';
 import { useRecoilValue } from 'recoil';
 import { modeState } from 'state/appState';
 import { useModeLocalStorage } from 'hooks/useModeLocalStorage';
@@ -13,6 +14,7 @@ import { Logo } from 'Utils/logo';
 import FlagEn from '../../assets/flag_en.png';
 import * as Styled from './Header.styles';
 import { Hamburger } from 'components/Hamburger';
+import { useWindowSize } from 'Utils/windowSize';
 
 const { Link } = Anchor;
 
@@ -21,6 +23,17 @@ export const Header = () => {
   const { i18n } = useTranslation();
   const mode = useRecoilValue(modeState);
   const { onChangeMode } = useModeLocalStorage();
+
+  const [showMenu, setShowMenu] = useState(false);
+  const { width } = useWindowSize();
+
+  const onOpenCloseMenu = () => {
+    setShowMenu((prevState) => !prevState);
+  };
+
+  useEffect(() => {
+    setShowMenu(false);
+  }, [width >= 576]);
 
   const [language, setLanguage] = useState('en');
   const changeLanguage = (lng: string) => {
@@ -35,17 +48,6 @@ export const Header = () => {
       changeLanguage('pl');
     }
   };
-
-  const [showMenu, setShowMenu] = useState(false);
-  const onOpenCloseMenu = () => {
-    if (window.innerWidth >= 576) {
-      setShowMenu(false);
-    } else {
-      setShowMenu((prevState) => !prevState);
-    }
-  };
-
-  // TODO auto zamykanie powyżej 576px
 
   const renderFlag = () => {
     if (language === 'en') {
