@@ -36,6 +36,17 @@ export const Header = () => {
     }
   };
 
+  const [showMenu, setShowMenu] = useState(false);
+  const onOpenCloseMenu = () => {
+    if (window.innerWidth >= 576) {
+      setShowMenu(false);
+    } else {
+      setShowMenu((prevState) => !prevState);
+    }
+  };
+
+  // TODO auto zamykanie powyżej 576px
+
   const renderFlag = () => {
     if (language === 'en') {
       return <img src={FlagEn} alt="Language flag En" width={24} height={24} style={{ marginLeft: '3px' }} />;
@@ -73,9 +84,18 @@ export const Header = () => {
             <Link href="#projects" title={t('header.projects')} />
             <Link href="#contact" title={t('header.contact')} />
           </Styled.Anchor>
-          <Hamburger />
+          <Hamburger showMenu={showMenu} onOpenCloseMenu={onOpenCloseMenu} />
         </Styled.InnerWrapper>
       </Styled.Header>
+
+      <Styled.DropdownMenu close={!showMenu}>
+        <Styled.Anchor affix={false} targetOffset={95} onClick={() => setShowMenu(false)} mobile>
+          <Link href="#about" title={t('header.about')} />
+          <Link href="#tech" title={t('header.tech')} />
+          <Link href="#projects" title={t('header.projects')} />
+          <Link href="#contact" title={t('header.contact')} />
+        </Styled.Anchor>
+      </Styled.DropdownMenu>
     </>
   );
 };

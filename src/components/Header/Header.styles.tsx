@@ -1,17 +1,27 @@
 import styled, { css } from 'styled-components';
 import { Anchor as AntdAnchor } from 'antd';
 import { colors } from '../../styles/colors';
-import { breakpoint, shadow } from '../../styles/variables';
+import { breakpoint, fontSize, shadow } from '../../styles/variables';
 
-interface InnerWrapperProps {
+type InnerWrapperProps = {
   $justifyEnd?: boolean;
-}
+};
+
+type MenuProps = {
+  close: boolean;
+};
+
+type AnchorProps = {
+  mobile?: boolean;
+};
 
 export const Config = styled.div`
+  position: relative;
   width: 100%;
   height: 35px;
   border-bottom: 1px solid ${colors.green};
   background-color: var(--background-color);
+  z-index: 3;
 `;
 
 export const InnerWrapper = styled.nav<InnerWrapperProps>`
@@ -50,23 +60,85 @@ export const Header = styled.header`
   background-color: var(--background-color);
   position: sticky;
   top: 0px;
-  z-index: 1;
+  z-index: 3;
 `;
 
-export const Anchor = styled(AntdAnchor)`
-  display: none;
+export const Anchor = styled(AntdAnchor)<AnchorProps>`
+  ${({ mobile }) =>
+    mobile
+      ? css`
+          display: flex;
+        `
+      : css`
+          display: none;
+        `}
 
   @media screen and (min-width: ${breakpoint.s}) {
-    display: flex;
+    ${({ mobile }) =>
+      mobile
+        ? css`
+            display: none;
+          `
+        : css`
+            display: flex;
+          `}
   }
 
   .ant-anchor {
     display: flex;
+    ${({ mobile }) =>
+      mobile &&
+      css`
+        flex-direction: column;
+      `}
   }
+  .ant-anchor-ink {
+    ${({ mobile }) =>
+      mobile &&
+      css`
+        display: none;
+      `}
+  }
+
   .ant-anchor-link-title {
     color: var(--text-color);
+    ${({ mobile }) =>
+      mobile &&
+      css`
+        margin-bottom: 20px;
+        font-size: ${fontSize.l};
+      `}
   }
   .ant-anchor-link-active > .ant-anchor-link-title {
     color: ${colors.green};
   }
+`;
+
+export const DropdownMenu = styled.div<MenuProps>`
+  background-color: var(--background-color);
+  color: var(--text-color);
+  position: fixed;
+  top: 35px;
+  left: auto;
+  min-width: 100%;
+  min-height: 100%;
+  transition: all 0.2s ease-out;
+  z-index: 2;
+  overflow: hidden;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  ${({ close }) =>
+    close
+      ? css`
+          right: -100%;
+          visibility: hidden;
+        `
+      : css`
+          right: 0;
+          visibility: visible;
+        `}
 `;
