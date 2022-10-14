@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components';
 import { breakpoint } from 'styles';
 
-interface BarProps {
+type BarProps = {
   open: boolean;
-}
+};
 
 export const HamburgerButton = styled.button`
   position: relative;

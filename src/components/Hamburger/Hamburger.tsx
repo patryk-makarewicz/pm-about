@@ -1,16 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 import * as Styled from './Hamburger.styles';
 
-export const Hamburger = () => {
-  const [showMenu, setShowMenu] = useState(false);
-  const handleOpenMenu = () => {
-    if (window.innerWidth >= 1200) {
-      setShowMenu(false);
-    } else {
-      setShowMenu(!showMenu);
-    }
-  };
+type HamburgerProps = {
+  showMenu: boolean;
+  onOpenCloseMenu: () => void;
+};
+
+export const Hamburger = ({ showMenu, onOpenCloseMenu }: HamburgerProps) => {
   useEffect(() => {
     if (showMenu) {
       document.body.style.overflow = 'hidden';
@@ -18,8 +15,9 @@ export const Hamburger = () => {
       document.body.style.overflow = '';
     }
   }, [showMenu]);
+
   return (
-    <Styled.HamburgerButton type="button" onClick={handleOpenMenu}>
+    <Styled.HamburgerButton type="button" onClick={onOpenCloseMenu}>
       <Styled.BarOne open={showMenu} />
       <Styled.BarTwo open={showMenu} />
       <Styled.BarThree open={showMenu} />
