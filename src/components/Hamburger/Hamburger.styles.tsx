@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { breakpoint } from 'styles';
 
 interface BarProps {
   open: boolean;
@@ -11,7 +12,11 @@ export const HamburgerButton = styled.button`
   border: none;
   outline: none;
   cursor: pointer;
-  z-index: 2;
+  z-index: 1;
+
+  @media screen and (min-width: ${breakpoint.s}) {
+    display: none;
+  }
 `;
 
 export const BarOne = styled.div<BarProps>`

@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Anchor as AntdAnchor } from 'antd';
 import { colors } from '../../styles/colors';
-import { shadow } from '../../styles/variables';
+import { breakpoint, shadow } from '../../styles/variables';
 
 interface InnerWrapperProps {
   $justifyEnd?: boolean;
@@ -17,16 +17,29 @@ export const Config = styled.div`
 export const InnerWrapper = styled.nav<InnerWrapperProps>`
   display: flex;
   align-items: center;
-  max-width: 1440px;
-  padding: 0 10px;
-  margin: auto;
-  height: 100%;
   ${({ $justifyEnd }) =>
     $justifyEnd
       ? css`
           justify-content: flex-end;
         `
-      : ``}
+      : css`
+          justify-content: space-between;
+        `}
+  max-width: 1440px;
+  padding: 0 10px;
+  margin: auto;
+  height: 100%;
+
+  @media screen and (min-width: ${breakpoint.s}) {
+    ${({ $justifyEnd }) =>
+      $justifyEnd
+        ? css`
+            justify-content: flex-end;
+          `
+        : css`
+            justify-content: flex-start;
+          `}
+  }
 `;
 
 export const Header = styled.header`
@@ -41,6 +54,12 @@ export const Header = styled.header`
 `;
 
 export const Anchor = styled(AntdAnchor)`
+  display: none;
+
+  @media screen and (min-width: ${breakpoint.s}) {
+    display: flex;
+  }
+
   .ant-anchor {
     display: flex;
   }

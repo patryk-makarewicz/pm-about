@@ -58,7 +58,7 @@ export const Header = () => {
         <Styled.InnerWrapper $justifyEnd>
           <Switch checked={mode} onChange={onChangeMode} size="small" style={{ margin: '0 10px' }} />
           {renderMode()}
-          <Button type="text" onClick={onChangeLanguage}>
+          <Button type="text" onClick={onChangeLanguage} style={{ marginLeft: '15px', padding: 0 }}>
             {renderFlag()}
           </Button>
         </Styled.InnerWrapper>
