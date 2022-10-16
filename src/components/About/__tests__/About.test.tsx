@@ -5,17 +5,17 @@ import { About } from '../About';
 afterEach(cleanup);
 
 const renderAbout = () => {
-  const { container } = render(<About />);
+  const { baseElement } = render(<About />);
 
   return {
-    container
+    baseElement
   };
 };
 
 describe('Testing About Component', () => {
   test('should take snapshot', async () => {
-    const { container } = renderAbout();
+    const { baseElement } = renderAbout();
 
-    expect(container).toMatchSnapshot();
+    expect(baseElement).toMatchSnapshot();
   });
 });

@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Anchor Component should take snapshot 1`] = `
+.c0 {
+  display: none;
+}
+
+.c0 .ant-anchor {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .ant-anchor-link-title {
+  color: var(--text-color);
+}
+
+.c0 .ant-anchor-link-active > .ant-anchor-link-title {
+  color: #389e0d;
+}
+
+@media screen and (min-width:576px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+<body>
+  <div>
+    <div
+      class="ant-anchor-wrapper c0"
+      style="max-height: 100vh;"
+    >
+      <div
+        class="ant-anchor ant-anchor-fixed"
+      >
+        <div
+          class="ant-anchor-ink"
+        >
+          <span
+            class="ant-anchor-ink-ball"
+          />
+        </div>
+        <div
+          class="ant-anchor-link"
+        >
+          <a
+            class="ant-anchor-link-title"
+            href="#about"
+            title="About Testing"
+          >
+            About Testing
+          </a>
+        </div>
+        <div
+          class="ant-anchor-link"
+        >
+          <a
+            class="ant-anchor-link-title"
+            href="#tech"
+            title="Tech Testing"
+          >
+            Tech Testing
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
