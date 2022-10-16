@@ -44,7 +44,8 @@ module.exports = {
     'no-console': 'off',
     '@typescript-eslint/no-empty-function': ['error', { allow: ['arrowFunctions'] }],
     'no-unused-vars': 'off',
-    'react/prop-types': 'off'
+    'react/prop-types': 'off',
+    'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/*.test.js', '**/*.spec.js', '**/*.ts'] }]
   },
   ignorePatterns: ['.eslintrc.js', 'i18n.js']
 };
