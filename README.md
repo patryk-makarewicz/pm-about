@@ -1,15 +1,29 @@
-<!-- ![cover](./public/cover.png) -->
+![cover](./public/cover.jpg)
 
 # General info
 
-This is the website with my projects.
+This is the website about me - Frontend Developer | React.
 <br />
+
+## What's inside?
+
+✔ React<br />
+✔ Recoil<br />
+✔ TypeScript<br />
+✔ JavaScript<br />
+✔ Rest API<br />
+✔ React Testing Library<br />
+✔ HTML5<br />
+✔ CSS3<br />
+✔ SASS<br />
+✔ Styled Components<br />
+✔ Ant Design<br />
 
 ## Link to website
 
-<!-- To watch click => [here] -->
+To watch click [here]
 
-<!-- [here]: https://www.makadev.pl -->
+[here]: https://www.makadev.pl
 
 ## Getting Started with Create React App
 
