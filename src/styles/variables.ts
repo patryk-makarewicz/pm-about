@@ -1,5 +1,13 @@
 import { pxToRem } from './helpers';
 
+//----- z-index -----
+
+export const zIndex = {
+  header: 3,
+  mobileMenu: 2,
+  footer: 1
+};
+
 //----- Fonts -----
 
 export const fontWeight = {

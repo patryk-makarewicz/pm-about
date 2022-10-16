@@ -1,10 +1,11 @@
-import { useState } from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect, useState } from 'react';
 import { useRecoilValue } from 'recoil';
 import { modeState } from 'state/appState';
 import { useModeLocalStorage } from 'hooks/useModeLocalStorage';
 
 import { useTranslation } from 'react-i18next';
-import { Anchor, Button, Switch } from 'antd';
+import { Button, Switch } from 'antd';
 
 import { ReactComponent as FlagPl } from '../../assets/flag_poland.svg';
 import { ReactComponent as ModeDark } from '../../assets/mode_dark.svg';
@@ -12,14 +13,26 @@ import { ReactComponent as ModeLight } from '../../assets/mode_light.svg';
 import { Logo } from 'Utils/logo';
 import FlagEn from '../../assets/flag_en.png';
 import * as Styled from './Header.styles';
-
-const { Link } = Anchor;
+import { Hamburger } from 'components/Hamburger';
+import { useWindowSize } from 'Utils/windowSize';
+import { Anchor } from 'components/Anchor';
 
 export const Header = () => {
   const { t } = useTranslation();
   const { i18n } = useTranslation();
   const mode = useRecoilValue(modeState);
   const { onChangeMode } = useModeLocalStorage();
+
+  const [showMenu, setShowMenu] = useState(false);
+  const { width } = useWindowSize();
+
+  const onOpenCloseMenu = () => {
+    setShowMenu((prevState) => !prevState);
+  };
+
+  useEffect(() => {
+    setShowMenu(false);
+  }, [width >= 576]);
 
   const [language, setLanguage] = useState('en');
   const changeLanguage = (lng: string) => {
@@ -51,13 +64,32 @@ export const Header = () => {
     }
   };
 
+  const paths = [
+    {
+      href: '#about',
+      title: t('header.about')
+    },
+    {
+      href: '#tech',
+      title: t('header.tech')
+    },
+    {
+      href: '#projects',
+      title: t('header.projects')
+    },
+    {
+      href: '#contact',
+      title: t('header.contact')
+    }
+  ];
+
   return (
     <>
       <Styled.Config id="about">
         <Styled.InnerWrapper $justifyEnd>
           <Switch checked={mode} onChange={onChangeMode} size="small" style={{ margin: '0 10px' }} />
           {renderMode()}
-          <Button type="text" onClick={onChangeLanguage}>
+          <Button type="text" onClick={onChangeLanguage} style={{ marginLeft: '15px', padding: 0 }}>
             {renderFlag()}
           </Button>
         </Styled.InnerWrapper>
@@ -66,14 +98,14 @@ export const Header = () => {
       <Styled.Header>
         <Styled.InnerWrapper>
           <h1 style={{ margin: 'auto 20px auto 0', display: 'flex' }}>{Logo()}</h1>
-          <Styled.Anchor affix={false} targetOffset={95}>
-            <Link href="#about" title={t('header.about')} />
-            <Link href="#tech" title={t('header.tech')} />
-            <Link href="#projects" title={t('header.projects')} />
-            <Link href="#contact" title={t('header.contact')} />
-          </Styled.Anchor>
+          <Anchor paths={paths} />
+          <Hamburger showMenu={showMenu} onOpenCloseMenu={onOpenCloseMenu} />
         </Styled.InnerWrapper>
       </Styled.Header>
+
+      <Styled.MobileMenu close={!showMenu}>
+        <Anchor paths={paths} onClick={() => setShowMenu(false)} mobile />
+      </Styled.MobileMenu>
     </>
   );
 };
