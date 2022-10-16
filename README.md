@@ -23,7 +23,7 @@ This is the website about me - Frontend Developer | React.
 
 To watch click [here]
 
-[here]: https://www.makadev.pl
+[here]: https://patryk-makarewicz.netlify.app
 
 ## Getting Started with Create React App
 
