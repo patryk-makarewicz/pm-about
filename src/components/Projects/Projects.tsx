@@ -17,21 +17,31 @@ export const Projects = () => {
       <SectionTitle title={t('projects.title')} darkMode />
       <Styled.Paragraph>{t('projects.description')}</Styled.Paragraph>
       <Styled.CardContainer>
-        {isLoadingRepoList && <Spinner />}
+        {(() => {
+          if (isLoadingRepoList) {
+            return <Spinner />;
+          }
 
-        {(isErrorRepoList || repoList.length === 0) && <Empty />}
+          if (isErrorRepoList || repoList.length === 0) {
+            return <Empty />;
+          }
 
-        {repoList.map((repo: SingleRepoModel) => (
-          <CardProjects
-            key={repo.id}
-            avatar={repo.owner.avatar_url}
-            title={repo.name}
-            description={repo.description}
-            tags={repo.topics}
-            urlGithub={repo.owner.html_url}
-            urlCode={repo.html_url}
-          />
-        ))}
+          return (
+            <>
+              {repoList.map((repo: SingleRepoModel) => (
+                <CardProjects
+                  key={repo.id}
+                  avatar={repo.owner.avatar_url}
+                  title={repo.name}
+                  description={repo.description}
+                  tags={repo.topics}
+                  urlGithub={repo.owner.html_url}
+                  urlCode={repo.html_url}
+                />
+              ))}
+            </>
+          );
+        })()}
       </Styled.CardContainer>
     </div>
   );
