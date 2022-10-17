@@ -97,7 +97,7 @@ export const Header = () => {
 
       <Styled.Header>
         <Styled.InnerWrapper>
-          <h1 style={{ margin: 'auto 20px auto 0', display: 'flex' }}>{Logo()}</h1>
+          <h1 style={{ margin: 'auto 15px auto 0', display: 'flex' }}>{Logo()}</h1>
           <Anchor paths={paths} />
           <Hamburger showMenu={showMenu} onOpenCloseMenu={onOpenCloseMenu} />
         </Styled.InnerWrapper>

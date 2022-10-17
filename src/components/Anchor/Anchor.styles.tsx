@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Anchor as AntdAnchor } from 'antd';
 import { colors } from '../../styles/colors';
-import { breakpoint, fontSize } from '../../styles/variables';
+import { breakpoint, fontSize, fontWeight } from '../../styles/variables';
 
 type AnchorProps = {
   mobile?: boolean;
@@ -29,6 +29,8 @@ export const Anchor = styled(AntdAnchor)<AnchorProps>`
   }
 
   .ant-anchor {
+    font-size: ${fontSize.m};
+    font-weight: ${fontWeight.regular};
     display: flex;
     ${({ mobile }) =>
       mobile &&

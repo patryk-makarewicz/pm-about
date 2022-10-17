@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing About Component should take snapshot 1`] = `
+.c3 {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--background-color);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c1 {
+  position: relative;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+  margin-left: 120px;
+}
+
+.c1::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 60%;
+  margin-left: -50px;
+  width: 0;
+  height: 0;
+  border-top: solid 5px var(--background-color);
+  border-left: solid 5px transparent;
+  border-right: solid 5px transparent;
+}
+
+.c2 {
+  display: inline-block;
+  -webkit-animation: wave 1.5s ease-in-out infinite;
+  animation: wave 1.5s ease-in-out infinite;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+}
+
+.c4 {
+  color: var(--text-color);
+  font-size: 1rem;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.c6 {
+  color: var(--text-color);
+  font-size: 1rem;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.c5 {
+  color: #389e0d;
+  font-weight: 700;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--background-color);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.c7:hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  opacity: 0.8;
+}
+
+<body>
+  <div>
+    <section
+      class=""
+    >
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        >
+          greeting.hi
+           
+          <span
+            class="c2"
+          >
+            🖐
+          </span>
+        </div>
+        <img
+          alt="Me"
+          class="c3"
+          src="me.jpg"
+          title="Patryk Makarewicz"
+        />
+      </div>
+      <p
+        class="c4"
+      >
+        greeting.dev
+         
+        <span
+          class="c5"
+        >
+          greeting.devGreen
+        </span>
+      </p>
+      <p
+        class="c6"
+      >
+        greeting.content
+         😊.
+      </p>
+      <div
+        class="ant-row ant-row-center"
+      >
+        <div
+          class="ant-space ant-space-horizontal ant-space-align-center"
+        >
+          <div
+            class="ant-space-item"
+            style="margin-right: 8px;"
+          >
+            <a
+              class="c7"
+              href="https://www.linkedin.com/in/patryk-makarewicz/"
+              target="_blank"
+              title="Go to LinkedIn"
+            >
+              <svg
+                height="36"
+                width="36"
+              >
+                linkedin.svg
+              </svg>
+            </a>
+          </div>
+          <div
+            class="ant-space-item"
+          >
+            <a
+              class="c7"
+              href="https://github.com/patryk-makarewicz"
+              target="_blank"
+              title="Go to Github"
+            >
+              <svg
+                height="36"
+                width="36"
+              >
+                github.svg
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+`;
