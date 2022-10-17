@@ -10,7 +10,7 @@ import { Spinner } from 'components/Spinner';
 
 export const Projects = () => {
   const { t } = useTranslation();
-  const { data: repoList, isLoading: isLoadingRepoList, isError: isErrorRepoList } = useRepoList(true);
+  const { data: repoList, isLoading: isLoadingRepoList, isError: isErrorRepoList } = useRepoList();
 
   return (
     <div id="projects">
