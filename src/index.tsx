@@ -1,12 +1,13 @@
+import { queryClient } from 'api';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import reportWebVitals from './reportWebVitals';
+import { QueryClientProvider } from 'react-query';
+import { RecoilRoot } from 'recoil';
 
 import { App } from 'components/App';
-import { RecoilRoot } from 'recoil';
+
 import './i18n';
-import { QueryClientProvider } from 'react-query';
-import { queryClient } from 'api';
+import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
