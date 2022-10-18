@@ -1,21 +1,23 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import { Button, Switch } from 'antd';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useRecoilValue } from 'recoil';
 import { modeState } from 'state/appState';
+
 import { useModeLocalStorage } from 'hooks/useModeLocalStorage';
 
-import { useTranslation } from 'react-i18next';
-import { Button, Switch } from 'antd';
+import { Anchor } from 'components/Anchor';
+import { Hamburger } from 'components/Hamburger';
 
+import { Logo } from 'utils/logo';
+import { useWindowSize } from 'utils/windowSize';
+
+import FlagEn from '../../assets/flag_en.png';
 import { ReactComponent as FlagPl } from '../../assets/flag_poland.svg';
 import { ReactComponent as ModeDark } from '../../assets/mode_dark.svg';
 import { ReactComponent as ModeLight } from '../../assets/mode_light.svg';
-import { Logo } from 'Utils/logo';
-import FlagEn from '../../assets/flag_en.png';
 import * as Styled from './Header.styles';
-import { Hamburger } from 'components/Hamburger';
-import { useWindowSize } from 'Utils/windowSize';
-import { Anchor } from 'components/Anchor';
 
 export const Header = () => {
   const { t } = useTranslation();
@@ -67,20 +69,20 @@ export const Header = () => {
   const paths = [
     {
       href: '#about',
-      title: t('header.about')
+      title: t('header.about'),
     },
     {
       href: '#tech',
-      title: t('header.tech')
+      title: t('header.tech'),
     },
     {
       href: '#projects',
-      title: t('header.projects')
+      title: t('header.projects'),
     },
     {
       href: '#contact',
-      title: t('header.contact')
-    }
+      title: t('header.contact'),
+    },
   ];
 
   return (

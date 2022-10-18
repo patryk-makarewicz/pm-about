@@ -1,6 +1,8 @@
-import { Avatar, Tag, Card, CardProps } from 'antd';
-import { Button } from 'components/Button';
 import { BranchesOutlined, CodeOutlined } from '@ant-design/icons';
+import { Avatar, Tag, Card, CardProps } from 'antd';
+
+import { Button } from 'components/Button';
+
 import * as Styled from './CardProjects.styles';
 
 const { Meta } = Card;
@@ -27,7 +29,7 @@ export const CardProjects = ({ avatar, title, description, tags, urlGithub, urlC
       </Button>,
       <Button type="text" href={urlCode} target="_blank">
         <CodeOutlined style={{ fontSize: '22px' }} />
-      </Button>
+      </Button>,
     ]}>
     <Meta avatar={<Avatar src={avatar} />} title={title} description={description} />
     <Styled.TagContainer>

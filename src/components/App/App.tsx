@@ -1,6 +1,7 @@
-import { LandingPage } from 'pages/LandingPage';
 import { useRecoilValue } from 'recoil';
 import { modeState } from 'state/appState';
+
+import { LandingPage } from 'pages/LandingPage';
 
 import GlobalStyles from 'styles/GlobalStyles';
 

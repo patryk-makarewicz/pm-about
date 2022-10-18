@@ -1,9 +1,10 @@
 import { message } from 'antd';
 import { QueryKey, RepoAPI } from 'api';
-import { RepoListModel } from 'api/RepoAPI/Repo.dto';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useQuery } from 'react-query';
+
+import { RepoListModel } from 'api/RepoAPI/Repo.dto';
 
 export const useRepoList = () => {
   const { t } = useTranslation();
@@ -16,12 +17,12 @@ export const useRepoList = () => {
     },
     onError: () => {
       message.error(t('messages.fail.generic'));
-    }
+    },
   });
 
   return {
     data: useMemo(() => (data ? data : []), [data]),
     isLoading: isLoading || initialLoading,
-    isError
+    isError,
   };
 };

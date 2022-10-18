@@ -1,7 +1,9 @@
+import { useTranslation } from 'react-i18next';
+
 import { Card } from 'components/Card';
 import { SectionTitle } from 'components/Typography/SectionTitle';
+
 import { techData } from 'helpers/tech';
-import { useTranslation } from 'react-i18next';
 
 import * as Styled from './Tech.styles';
 

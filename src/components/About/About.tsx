@@ -1,8 +1,9 @@
 import { useTranslation } from 'react-i18next';
-import Me from '../../assets/me.jpg';
 
-import * as Styled from './About.styles';
 import { SocialMedia } from 'components/SocialMedia/SocialMedia';
+
+import Me from '../../assets/me.jpg';
+import * as Styled from './About.styles';
 
 export const About = () => {
   const { t } = useTranslation();

@@ -1,8 +1,8 @@
-import TermsOfService from './Terms/TermsOfService';
-import PrivacyPolicy from './Terms/PrivacyPolicy';
+import { Button } from 'components/Button';
 
 import styles from './Regulations.module.scss';
-import { Button } from 'components/Button';
+import PrivacyPolicy from './Terms/PrivacyPolicy';
+import TermsOfService from './Terms/TermsOfService';
 
 type ListProps = {
   showTerms: boolean;

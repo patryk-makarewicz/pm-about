@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import { Form as AntdForm } from 'antd';
+import styled from 'styled-components';
 
 export const Paragraph = styled.p`
   text-align: center;

@@ -1,5 +1,6 @@
-import * as Styled from './Anchor.styles';
 import { Anchor as AntdAnchor } from 'antd';
+
+import * as Styled from './Anchor.styles';
 
 const { Link } = AntdAnchor;
 

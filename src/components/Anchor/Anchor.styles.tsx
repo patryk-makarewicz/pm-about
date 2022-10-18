@@ -1,5 +1,6 @@
-import styled, { css } from 'styled-components';
 import { Anchor as AntdAnchor } from 'antd';
+import styled, { css } from 'styled-components';
+
 import { colors } from '../../styles/colors';
 import { breakpoint, fontSize, fontWeight } from '../../styles/variables';
 

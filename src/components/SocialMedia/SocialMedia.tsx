@@ -1,6 +1,7 @@
 import { Row, Space } from 'antd';
-import { ReactComponent as LinkedIn } from '../../assets/linkedin.svg';
+
 import { ReactComponent as Github } from '../../assets/github.svg';
+import { ReactComponent as LinkedIn } from '../../assets/linkedin.svg';
 import * as Styled from './SocialMedia.styles';
 
 type SocialMediaType = {

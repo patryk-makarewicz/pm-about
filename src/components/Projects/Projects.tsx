@@ -1,12 +1,15 @@
-import { useTranslation } from 'react-i18next';
-import { useRepoList } from 'hooks/useRepoList';
-import { SingleRepoModel } from 'api/RepoAPI/Repo.model';
 import { Empty } from 'antd';
-import { SectionTitle } from 'components/Typography/SectionTitle';
+import { useTranslation } from 'react-i18next';
+
+import { SingleRepoModel } from 'api/RepoAPI/Repo.model';
+
+import { useRepoList } from 'hooks/useRepoList';
+
 import { CardProjects } from 'components/CardProjects';
+import { Spinner } from 'components/Spinner';
+import { SectionTitle } from 'components/Typography/SectionTitle';
 
 import * as Styled from './Projects.styles';
-import { Spinner } from 'components/Spinner';
 
 export const Projects = () => {
   const { t } = useTranslation();

@@ -1,9 +1,10 @@
+import { useState } from 'react';
+
 import Cookie from 'components/Cookie/Cookie';
 import { Footer } from 'components/Footer';
 import { Regulations } from 'components/Regulations';
-import { useState } from 'react';
-import { Header } from '../components/Header';
 
+import { Header } from '../components/Header';
 import * as Styled from './layout.styles';
 
 type LayoutProps = {

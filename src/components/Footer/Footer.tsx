@@ -1,6 +1,8 @@
-import { Button } from 'components/Button';
 import { useTranslation } from 'react-i18next';
-import { Logo } from 'Utils/logo';
+
+import { Button } from 'components/Button';
+
+import { Logo } from 'utils/logo';
 
 import * as Styled from './Footer.styles';
 

@@ -1,4 +1,5 @@
 import { Divider } from 'antd';
+
 import * as Styled from './Card.styles';
 
 type CardProps = {

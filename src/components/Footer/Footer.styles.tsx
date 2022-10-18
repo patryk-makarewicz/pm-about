@@ -1,6 +1,7 @@
-import styled from 'styled-components';
-import { breakpoint, fontSize, shadow, zIndex } from 'styles/variables';
 import { Divider as AntdDivider } from 'antd';
+import styled from 'styled-components';
+
+import { breakpoint, fontSize, shadow, zIndex } from 'styles/variables';
 
 export const LogoWrapper = styled.div`
   margin-bottom: 5px;

@@ -1,16 +1,15 @@
+import emailjs from '@emailjs/browser';
+import { Row } from 'antd';
 import { useEffect, useRef, useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import { useForm } from 'react-hook-form';
-
-import { SocialMedia } from 'components/SocialMedia/SocialMedia';
+import { Button } from 'components/Button';
 import { Container, ErrorMessage, Input, Label, Textarea, SentMessage } from 'components/Form';
-import emailjs from '@emailjs/browser';
+import { SocialMedia } from 'components/SocialMedia/SocialMedia';
+import { SectionTitle } from 'components/Typography/SectionTitle';
 
 import * as Styled from './Contact.styles';
-import { Row } from 'antd';
-import { Button } from 'components/Button';
-import { SectionTitle } from 'components/Typography/SectionTitle';
 
 type Inputs = {
   firstName: string;
@@ -26,7 +25,7 @@ export const Contact = () => {
     register,
     handleSubmit,
     reset,
-    formState: { errors }
+    formState: { errors },
   } = useForm<Inputs>();
   const formRef = useRef<HTMLFormElement>(null);
   const [sendingStatus, setSendingStatus] = useState(false);
@@ -70,7 +69,7 @@ export const Contact = () => {
             <Label htmlFor="firstName">{t('contact.firstName')}</Label>
             <Input
               {...register('firstName', {
-                required: true
+                required: true,
               })}
               maxLength={70}
               id="firstName"
@@ -85,7 +84,7 @@ export const Contact = () => {
             <Label htmlFor="lastName">{t('contact.lastName')}</Label>
             <Input
               {...register('lastName', {
-                required: true
+                required: true,
               })}
               maxLength={70}
               defaultValue=""
@@ -101,7 +100,7 @@ export const Contact = () => {
             <Label htmlFor="email">{t('contact.email')}</Label>
             <Input
               {...register('email', {
-                required: true
+                required: true,
               })}
               maxLength={70}
               id="email"
@@ -116,7 +115,7 @@ export const Contact = () => {
             <Label htmlFor="phone">{t('contact.phone')}</Label>
             <Input
               {...register('phone', {
-                required: true
+                required: true,
               })}
               maxLength={70}
               id="phone"
@@ -131,7 +130,7 @@ export const Contact = () => {
             <Label htmlFor="message">{t('contact.message')}</Label>
             <Textarea
               {...register('message', {
-                required: false
+                required: false,
               })}
               maxLength={1000}
               id="message"
