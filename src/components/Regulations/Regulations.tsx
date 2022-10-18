@@ -1,6 +1,6 @@
 import { Button } from 'components/Button';
 
-import styles from './Regulations.module.scss';
+import * as Styled from './Regulations.styles';
 import PrivacyPolicy from './Terms/PrivacyPolicy';
 import TermsOfService from './Terms/TermsOfService';
 
@@ -11,13 +11,13 @@ type ListProps = {
 };
 
 export const Regulations = ({ showTerms, showPrivacy, onHandleCloseBoxRegulation }: ListProps) => (
-  <div className={styles.regulations}>
-    <div className={styles.regulations__innerWrapper}>
+  <Styled.Wrapper>
+    <Styled.InnerWrapper>
       {showTerms && <TermsOfService />}
       {showPrivacy && <PrivacyPolicy />}
-      <div className={styles.regulations__button}>
+      <Styled.Container>
         <Button onClick={onHandleCloseBoxRegulation}>Zamknij</Button>
-      </div>
-    </div>
-  </div>
+      </Styled.Container>
+    </Styled.InnerWrapper>
+  </Styled.Wrapper>
 );

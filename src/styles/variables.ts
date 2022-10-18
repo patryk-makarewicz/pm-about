@@ -3,9 +3,10 @@ import { pxToRem } from './helpers';
 //----- z-index -----
 
 export const zIndex = {
+  regulations: 4,
   header: 3,
   mobileMenu: 2,
-  footer: 1
+  footer: 1,
 };
 
 //----- Fonts -----
@@ -13,7 +14,7 @@ export const zIndex = {
 export const fontWeight = {
   regular: 400,
   semiBold: 600,
-  bold: 700
+  bold: 700,
 };
 
 export const fontSize = {
@@ -22,7 +23,7 @@ export const fontSize = {
   m: `${pxToRem('16px')}`,
   l: `${pxToRem('18px')}`,
   xl: `${pxToRem('21px')}`,
-  xll: `${pxToRem('36px')}`
+  xll: `${pxToRem('36px')}`,
 };
 
 //----- Line height -----
@@ -32,7 +33,7 @@ export const lineHeight = {
   m: '20px',
   l: '24px',
   xl: '30px',
-  xll: '40px'
+  xll: '40px',
 };
 
 //----- Margins -----
@@ -43,7 +44,7 @@ export const margin = {
   m: '16px',
   l: '20px',
   xl: '30px',
-  xll: '50px'
+  xll: '50px',
 };
 
 //----- Paddings -----
@@ -54,7 +55,7 @@ export const padding = {
   m: '16px',
   l: '20px',
   xl: '30px',
-  xll: '50px'
+  xll: '50px',
 };
 
 //----- Breakpoints -----
@@ -65,12 +66,12 @@ export const breakpoint = {
   m: '768px',
   l: '992px',
   xl: '1200px',
-  xll: '1400px'
+  xll: '1400px',
 };
 
 //----- Shadows -----
 
 export const shadow = {
   first: '0 4px 12px rgba(0, 0, 0, 0.2)',
-  second: '0px -2px 12px rgba(0, 0, 0, 0.2)'
+  second: '0px -2px 12px rgba(0, 0, 0, 0.2)',
 };
