@@ -1,17 +1,17 @@
-import styles from './MainForTerms.module.scss';
+import * as Styled from './Styles';
 
 const TermsOfService = () => (
   <>
     <header>
-      <h2 className={styles.box__header}>REGULAMIN SERWISU INTERNETOWEGO makaDev Patryk Makarewicz</h2>
+      <Styled.Header>REGULAMIN SERWISU INTERNETOWEGO makaDev Patryk Makarewicz</Styled.Header>
     </header>
-    <div className={styles.box}>
-      <h3 className={styles.box__title}>
+    <Styled.Container>
+      <Styled.Title>
         <strong>Postanowienia Ogólne</strong>
         <p>
           <strong>&sect;1</strong>
         </p>
-      </h3>
+      </Styled.Title>
       <ol>
         <li>
           Patryk Makarewicz, prowadzący działalność gospodarczą pod firmą <strong>makaDev Patryk Makarewicz </strong>z
@@ -46,24 +46,24 @@ const TermsOfService = () => (
         </li>
         <li>W sprawach nieuregulowanych w Regulaminie zastosowanie mają obowiązujące przepisy prawa.</li>
       </ol>
-      <h3 className={styles.box__title}>
+      <Styled.Title>
         <strong>Podmiot (Usługodawca) oferujący usługi świadczone drogą elektroniczną</strong>
         <p>
           <strong>&sect;2</strong>
         </p>
-      </h3>
+      </Styled.Title>
       Podmiotem (Usługodawcą) oferującym usługi świadczone drogą elektroniczną za pośrednictwem Serwisu &bdquo;
       <strong>makaDev</strong>&rdquo; jest: Patryk Makarewicz, prowadzący działalność gospodarczą pod firmą{' '}
       <strong>makaDev Patryk Makarewicz </strong>z siedzibą w Gdańsku (80-398) przy ul. Obrońców Wybrzeża 15 lok. 705,
       NIP: 5851401701, adres e-mail: kontakt@makadev.pl, telefon: +48 664-189-734.
-      <h3 className={styles.box__title}>
+      <Styled.Title>
         <strong>Definicje</strong>
         <p>
           <strong>&sect;3</strong>
         </p>
-      </h3>
+      </Styled.Title>
       <p>Ilekroć w niniejszym Regulaminie używa się wymienionych poniżej terminów, należy przez nie rozumieć:</p>
-      <ul className={styles.box__list}>
+      <Styled.List>
         <li>
           1) <strong>Regulamin &ndash;</strong> niniejszy Regulamin,
         </li>
@@ -90,24 +90,24 @@ const TermsOfService = () => (
         <li>
           6) <strong>Użytkownik</strong> &ndash; każda osoba, która korzysta z Serwisu.
         </li>
-      </ul>
-      <h3 className={styles.box__title}>
+      </Styled.List>
+      <Styled.Title>
         <strong>Zakres Usług Serwisu</strong>
         <p>
           <strong>&sect; 4</strong>
         </p>
-      </h3>
+      </Styled.Title>
       Usługodawca świadczy drogą elektroniczną na rzecz Klientów następujące Usługi:
-      <ul className={styles.box__list}>
+      <Styled.List>
         <li>1) udostępnianie treści Serwisu,</li>
         <li>2) formularz kontaktowy umożliwiający kontakt z Usługodawcą.</li>
-      </ul>
-      <h3 className={styles.box__title}>
+      </Styled.List>
+      <Styled.Title>
         <strong>Warunki techniczne świadczenia Usług</strong>
         <p>
           <strong>&sect;5</strong>
         </p>
-      </h3>
+      </Styled.Title>
       <ol>
         <li>
           W celu prawidłowego korzystania z Serwisu, Użytkownik zobowiązany jest dysponować sprzętem komputerowym i
@@ -126,22 +126,22 @@ const TermsOfService = () => (
           z cennikami dostawców, z których usług korzysta.
         </li>
       </ol>
-      <h3 className={styles.box__title}>
+      <Styled.Title>
         <strong>Świadczenie Usług</strong>
         <p>
           <strong>&sect;6</strong>
         </p>
-      </h3>
+      </Styled.Title>
       <ol>
         <li>Treści prezentowane w Serwisie nie stanowią oferty handlowej w rozumieniu Kodeksu Cywilnego.</li>
         <li>Usługodawca za pośrednictwem Serwisu udostępnia informacje o świadczonych usługach.</li>
       </ol>
-      <h3 className={styles.box__title}>
+      <Styled.Title>
         <strong>Ceny, koszty dostawy i płatności</strong>
         <p>
           <strong>&sect;7</strong>
         </p>
-      </h3>
+      </Styled.Title>
       <ol>
         <li>Klient ma możliwość zawarcia z Usługodawcą Umowy Sprzedaży Produktów, znajdujących sięw Serwisie.</li>
         <li>
@@ -156,12 +156,12 @@ const TermsOfService = () => (
           organowi kontroli skarbowej.
         </li>
       </ol>
-      <h3 className={styles.box__title}>
+      <Styled.Title>
         <strong>Prawo odstąpienia od umowy</strong>
         <p>
           <strong>&sect;8</strong>
         </p>
-      </h3>
+      </Styled.Title>
       <ol>
         <li>
           Zgodnie z art. 27 Ustawy, Konsument, który zawarł umowę na odległość lub poza lokalem przedsiębiorstwa, może w
@@ -178,12 +178,12 @@ const TermsOfService = () => (
           rozwiązać Umowę, poprzez zaprzestanie korzystania z Usług i Serwisu.
         </li>
       </ol>
-      <h3 className={styles.box__title}>
+      <Styled.Title>
         <strong>Reklamacje</strong>
         <p>
           <strong>&sect;8</strong>
         </p>
-      </h3>
+      </Styled.Title>
       <ol>
         <li>
           W razie niewykonania lub nienależytego wykonania Usług przez Usługodawcę, Klient uprawniony jest do złożenia
@@ -204,12 +204,12 @@ const TermsOfService = () => (
           przesłania Klientowi potwierdzenia otrzymania reklamacji.
         </li>
       </ol>
-      <h3 className={styles.box__title}>
+      <Styled.Title>
         <strong>Odpowiedzialność</strong>
         <p>
           <strong>&sect;9</strong>
         </p>
-      </h3>
+      </Styled.Title>
       <ol>
         <li>
           Użytkownik ma obowiązek korzystania z Serwisu w sposób zgodny z przepisami prawa, niniejszym Regulaminem oraz
@@ -236,12 +236,12 @@ const TermsOfService = () => (
           informacji zawartych w serwisie.
         </li>
       </ol>
-      <h3 className={styles.box__title}>
+      <Styled.Title>
         <strong>Zastrzeżenia prawne</strong>
         <p>
           <strong>&sect;10</strong>
         </p>
-      </h3>
+      </Styled.Title>
       <ol>
         <li>
           Klient zobowiązany jest do korzystania z Serwisu zgodnie z ich przeznaczeniem, treścią Regulaminu oraz zgodnie
@@ -276,12 +276,12 @@ const TermsOfService = () => (
           Usługodawcy.
         </li>
       </ol>
-      <h3 className={styles.box__title}>
+      <Styled.Title>
         <strong>Zagrożenia</strong>
         <p>
           <strong>&sect;11</strong>
         </p>
-      </h3>
+      </Styled.Title>
       <ol>
         <li>
           Klient, tak jak każdy inny użytkownik Internetu, podlega zagrożeniom w związku z korzystaniem z Internetu.
@@ -303,22 +303,22 @@ const TermsOfService = () => (
           przed opisanymi niepożądanymi działaniami.
         </li>
       </ol>
-      <h3 className={styles.box__title}>
+      <Styled.Title>
         <strong>Dane osobowe</strong>
         <p>
           <strong>&sect;12</strong>
         </p>
-      </h3>
+      </Styled.Title>
       <ol>
         <li>Administratorem zebranych Danych osobowych jest Usługodawca.</li>
         <li>Zasady polityki prywatności Usługodawcy zamieszczono w odrębnym dokumencie „Polityka prywatności”.</li>
       </ol>
-      <h3 className={styles.box__title}>
+      <Styled.Title>
         <strong>Postanowienia końcowe</strong>
         <p>
           <strong>&sect;13</strong>
         </p>
-      </h3>
+      </Styled.Title>
       <ol>
         <li>
           Przed rozpoczęciem korzystania z Serwisu Klient zobowiązany jest do zapoznania się z treścią Regulaminu.
@@ -345,7 +345,7 @@ const TermsOfService = () => (
         <li>Dla celów wykonania Regulaminu oraz Umowy, zastosowanie ma prawo polskie.</li>
         <li>Regulamin obowiązuje od 22 lipiec 2021 roku.</li>
       </ol>
-    </div>
+    </Styled.Container>
   </>
 );
 

@@ -1,17 +1,17 @@
-import styles from './MainForTerms.module.scss';
+import * as Styled from './Styles';
 
 const PrivacyPolicy = () => (
   <>
     <header>
-      <h2 className={styles.box__header}>Polityka prywatności makaDev Patryk Makarewicz</h2>
+      <Styled.Header>Polityka prywatności makaDev Patryk Makarewicz</Styled.Header>
     </header>
-    <div className={styles.box}>
-      <h3 className={styles.box__title}>
+    <Styled.Container>
+      <Styled.Title>
         <strong>Administrator danych osobowych</strong>
         <p>
           <strong>&sect;1</strong>
         </p>
-      </h3>
+      </Styled.Title>
       <ol>
         <li>
           Administratorem danych osobowych Użytkowników jest Patryk Makarewicz, prowadzący działalność gospodarczą pod
@@ -45,7 +45,7 @@ const PrivacyPolicy = () => (
         </li>
         <li>
           Podanie przez Użytkownika danych osobowych jest dobrowolne, z zastrzeżeniem dwóch wyjątków:
-          <ul className={styles.box__list}>
+          <Styled.List>
             <li>
               1) Zawieranie umów sprzedaży Produktów z Administratorem - niepodanie danych osobowych niezbędnych do
               zawarcia i wykonania umowy sprzedaży z Administratorem skutkuje brakiem możliwości zawarcia tejże umowy.
@@ -59,24 +59,24 @@ const PrivacyPolicy = () => (
               osobowych (np. przetwarzanie danych w celu prowadzenia ksiąg podatkowych lub rachunkowych) i brak ich
               podania uniemożliwi Administratorowi wykonanie tychże obowiązków.
             </li>
-          </ul>
+          </Styled.List>
         </li>
         <li>
           Wszelkie słowa, wyrażenia i akronimy występujące na niniejszej stronie i rozpoczynające się z dużej litery
           należy rozumieć zgodnie z ich definicją zawartą w Regulaminie dostępnym pod adresem: www.makadev.pl.
         </li>
       </ol>
-      <h3 className={styles.box__title}>
+      <Styled.Title>
         <strong>Zakres i cel przetwarzania danych</strong>
         <p>
           <strong>&sect;2</strong>
         </p>
-      </h3>
+      </Styled.Title>
       <ol>
         <li>
           Administrator uprawniony jest do przetwarzania danych osobowych w przypadkach, gdy – i w takim zakresie, w
           jakim – spełniony jest co najmniej jeden z poniższych warunków:
-          <ul className={styles.box__list}>
+          <Styled.List>
             <li>
               1) Osoba, której dane dotyczą wyraziła zgodę na przetwarzanie swoich danych osobowych w jednym lub
               większej liczbie określonych celów,
@@ -92,12 +92,12 @@ const PrivacyPolicy = () => (
               tych interesów mają interesy lub podstawowe prawa i wolności osoby, której dane dotyczą, wymagające
               ochrony danych osobowych, w szczególności gdy osoba, której dane dotyczą, jest dzieckiem.
             </li>
-          </ul>
+          </Styled.List>
         </li>
         <li>
           Administrator może przetwarzać dane osobowe Użytkowników w następujących celach, na następujących podstawach,
           w okresach oraz w następującym zakresie:
-          <ul className={styles.box__list}>
+          <Styled.List>
             <li>
               1) Wykonanie umowy sprzedaży lub podjęcie działań na żądanie osoby, której dane dotyczą, przed zawarciem
               w/w umów. Podstawą prawną przetwarzania danych w tym celu jest artykuł 6 ust. 1 lit. b) Rozporządzenia
@@ -153,15 +153,15 @@ const PrivacyPolicy = () => (
               6) Administrator nie dokonuje profilowania. Dane osobowe nie są wykorzystywane do zautomatyzowanego
               podejmowania decyzji wywołujących wobec Użytkowników skutki prawne.
             </li>
-          </ul>
+          </Styled.List>
         </li>
       </ol>
-      <h3 className={styles.box__title}>
+      <Styled.Title>
         <strong>Przekazywanie, powierzenie przetwarzania danych</strong>
         <p>
           <strong>&sect;3</strong>
         </p>
-      </h3>
+      </Styled.Title>
       <ol>
         <li>
           Dane osobowe Użytkowników nie będą przekazywane do państwa trzeciego ani do organizacji międzynarodowej.
@@ -175,16 +175,16 @@ const PrivacyPolicy = () => (
           przetwarzania danych osobowych i tylko w zakresie niezbędnym do jego zrealizowania.
         </li>
       </ol>
-      <h3 className={styles.box__title}>
+      <Styled.Title>
         <strong>Prawa Użytkowników</strong>
         <p>
           <strong>&sect;4</strong>
         </p>
-      </h3>
+      </Styled.Title>
       <ol>
         <li>
           Użytkownikom przysługuje prawo do:
-          <ul className={styles.box__list}>
+          <Styled.List>
             <li>
               1) Żądania dostępu do swoich danych osobowych, ich sprostowania, usunięcia lub ograniczenia ich
               przetwarzania,
@@ -197,25 +197,25 @@ const PrivacyPolicy = () => (
             <li>4) Żądaniazaprzestania przetwarzania danych osobowych,</li>
             <li>5) Uzyskania kopii danych osobowych przetwarzanych przez Administratora,</li>
             <li>6) Wniesienia skargi dotyczącej przetwarzania danych osobowych do organu nadzorczego.</li>
-          </ul>
+          </Styled.List>
         </li>
         <li>
           Jeżeli przetwarzanie danych osobowych odbywa się na podstawie zgody, to Użytkownik ma prawo cofnąć zgodę na
           przetwarzanie jego danych osobowych poprzez zgłoszenie tego faktu pisemnie na adres Administratora.
         </li>
       </ol>
-      <h3 className={styles.box__title}>
+      <Styled.Title>
         <strong>Bezpieczeństwo danych</strong>
         <p>
           <strong>&sect;5</strong>
         </p>
-      </h3>
+      </Styled.Title>
       <ol>
         <li>
           Administrator dokłada starań, aby chronić dane osobowe Użytkowników przed nieuprawnionym dostępem osób
           trzecich i szanować prywatność każdego Użytkownika. W tym celu stosowane są rozwiązania techniczne i
           organizacyjne, które mają za zadanie zabezpieczenie danych osobowych. Tymi środkami są w szczególności:
-          <ul className={styles.box__list}>
+          <Styled.List>
             <li>1) Regularne testowanie infrastruktury informatycznej pod kątem bezpieczeństwa,</li>
             <li>2) Kontrolowanie dostępu do danych w ramach prowadzonej działalności gospodarczej,,</li>
             <li>
@@ -227,15 +227,15 @@ const PrivacyPolicy = () => (
               5) zdolność do szybkiego przywrócenia dostępności danych osobowych i dostępu do nich w razie incydentu
               fizycznego lub technicznego.
             </li>
-          </ul>
+          </Styled.List>
         </li>
       </ol>
-      <h3 className={styles.box__title}>
+      <Styled.Title>
         <strong>Bezpieczeństwo danych</strong>
         <p>
           <strong>&sect;6</strong>
         </p>
-      </h3>
+      </Styled.Title>
       <ol>
         <li>
           Pliki Cookies (ciasteczka) są to niewielkie informacje tekstowe w postaci plików tekstowych, wysyłane przez
@@ -260,12 +260,12 @@ const PrivacyPolicy = () => (
           pomocą rozszerzenia przeglądarki, który można pobrać ze strony: https://tools.google.com/dlpage/gaoptout.
         </li>
       </ol>
-      <h3 className={styles.box__title}>
+      <Styled.Title>
         <strong>Zmiany i aktualizacje Polityki prywatności</strong>
         <p>
           <strong>&sect;7</strong>
         </p>
-      </h3>
+      </Styled.Title>
       <ol>
         <li>
           Polityka może być okresowo modyfikowana. Modyfikacje mają na celu uwzględnienie zmian w praktykach
@@ -278,7 +278,7 @@ const PrivacyPolicy = () => (
         </li>
         <li>Niniejsza Polityka prywatności obowiązuje od 22 lipiec 2021 roku.</li>
       </ol>
-    </div>
+    </Styled.Container>
   </>
 );
 
