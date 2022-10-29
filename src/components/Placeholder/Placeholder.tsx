@@ -1,3 +1,7 @@
 import * as Styled from './Placeholder.styles';
 
-export const Placeholder = () => <Styled.Placeholder />;
+type PlaceholderProps = {
+  hide: boolean;
+};
+
+export const Placeholder = ({ hide }: PlaceholderProps) => <Styled.Placeholder hide={hide} />;
