@@ -5,5 +5,5 @@ export const colors = {
   gray2: '#cccbcb',
   green: '#389e0d',
   warning: '#C52A1A',
-  white: '#FFFFFF'
+  white: '#FFFFFF',
 };
