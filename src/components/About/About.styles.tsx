@@ -7,15 +7,35 @@ type TextProps = {
   $marginBottom?: string;
 };
 
+type PhotoProps = {
+  hide: boolean;
+};
+
 export const Wrapper = styled.section``;
 
-export const Photo = styled.img`
+export const Box = styled.div`
   width: 120px;
   height: 120px;
   border-radius: 50%;
   border: 4px solid var(--background-color);
   box-shadow: ${shadow.first};
   margin-bottom: ${margin.l};
+  overflow: hidden;
+`;
+
+export const Photo = styled.img<PhotoProps>`
+  width: 100%;
+  height: 100%;
+  transition: ease 1s all;
+  ${({ hide }) =>
+    hide
+      ? css`
+          opacity: 0;
+        `
+      : css`
+          opacity: 1;
+        `}
+  z-index: 1
 `;
 
 export const Greeting = styled.div`
