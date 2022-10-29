@@ -2,6 +2,7 @@ import { queryClient } from 'api';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
 import { RecoilRoot } from 'recoil';
 
 import { App } from 'components/App';
@@ -15,6 +16,7 @@ root.render(
     <RecoilRoot>
       <QueryClientProvider client={queryClient}>
         <App />
+        <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </RecoilRoot>
   </React.StrictMode>
