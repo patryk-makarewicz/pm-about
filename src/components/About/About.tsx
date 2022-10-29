@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Placeholder } from 'components/Placeholder';
 import { SocialMedia } from 'components/SocialMedia/SocialMedia';
+
+import { PhotoLoad } from 'utils/photo';
 
 import Me from '../../assets/me.jpg';
 import * as Styled from './About.styles';
@@ -10,18 +11,7 @@ import * as Styled from './About.styles';
 export const About = () => {
   const { t } = useTranslation();
 
-  const [loaded, setLoaded] = useState(false);
-  const refImage = useRef<HTMLImageElement>(null);
-  const onLoad = () => {
-    setLoaded(true);
-  };
-  useEffect(() => {
-    if (refImage.current && refImage.current.complete) {
-      onLoad();
-    }
-  });
-
-  console.log(loaded);
+  const { onLoad, loaded, refImage } = PhotoLoad();
 
   return (
     <Styled.Wrapper>
