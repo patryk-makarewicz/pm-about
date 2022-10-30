@@ -3,6 +3,8 @@ import { Avatar, Tag, Card, CardProps } from 'antd';
 
 import { Button } from 'components/Button';
 
+import { PhotoLoad } from 'utils/photo';
+
 import * as Styled from './CardProjects.styles';
 
 const { Meta } = Card;
@@ -18,26 +20,38 @@ type CardProjectsProps = {
 
 type Props = CardProjectsProps & CardProps;
 
-export const CardProjects = ({ avatar, title, description, tags, urlGithub, urlCode, ...props }: Props) => (
-  <Card
-    {...props}
-    style={{ width: '100%' }}
-    cover={<img alt="Project cover" src={`${process.env.PUBLIC_URL}/assets/project_cover.jpg`} />}
-    actions={[
-      <Button type="text" href={urlGithub} target="_blank">
-        <BranchesOutlined style={{ fontSize: '20px' }} />
-      </Button>,
-      <Button type="text" href={urlCode} target="_blank">
-        <CodeOutlined style={{ fontSize: '22px' }} />
-      </Button>,
-    ]}>
-    <Meta avatar={<Avatar src={avatar} />} title={title} description={description} />
-    <Styled.TagContainer>
-      {tags.map((tag, idx) => (
-        <Tag key={idx} color="#389e0d" style={{ marginBottom: '5px' }}>
-          {tag}
-        </Tag>
-      ))}
-    </Styled.TagContainer>
-  </Card>
-);
+export const CardProjects = ({ avatar, title, description, tags, urlGithub, urlCode, ...props }: Props) => {
+  const { onLoad, loaded, refPhoto } = PhotoLoad();
+
+  return (
+    <Card
+      {...props}
+      style={{ width: '100%' }}
+      cover={
+        <Styled.Photo
+          alt="Project cover"
+          src={`${process.env.PUBLIC_URL}/assets/project_cover.jpg`}
+          ref={refPhoto}
+          onLoad={onLoad}
+          hide={!loaded}
+        />
+      }
+      actions={[
+        <Button type="text" href={urlGithub} target="_blank">
+          <BranchesOutlined style={{ fontSize: '20px' }} />
+        </Button>,
+        <Button type="text" href={urlCode} target="_blank">
+          <CodeOutlined style={{ fontSize: '22px' }} />
+        </Button>,
+      ]}>
+      <Meta avatar={<Avatar src={avatar} />} title={title} description={description} />
+      <Styled.TagContainer>
+        {tags.map((tag, idx) => (
+          <Tag key={idx} color="#389e0d" style={{ marginBottom: '5px' }}>
+            {tag}
+          </Tag>
+        ))}
+      </Styled.TagContainer>
+    </Card>
+  );
+};
