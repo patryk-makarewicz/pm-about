@@ -2,12 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 
 export const PhotoLoad = () => {
   const [loaded, setLoaded] = useState(false);
-  const refImage = useRef<HTMLImageElement>(null);
+  const refPhoto = useRef<HTMLImageElement>(null);
   const onLoad = () => {
     setLoaded(true);
   };
   useEffect(() => {
-    if (refImage.current && refImage.current.complete) {
+    if (refPhoto.current && refPhoto.current.complete) {
       onLoad();
     }
   });
@@ -15,6 +15,6 @@ export const PhotoLoad = () => {
   return {
     onLoad,
     loaded,
-    refImage,
+    refPhoto,
   };
 };

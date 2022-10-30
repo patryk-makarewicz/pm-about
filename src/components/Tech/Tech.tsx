@@ -13,7 +13,7 @@ import * as Styled from './Tech.styles';
 export const Tech = () => {
   const { t } = useTranslation();
 
-  const { onLoad, loaded, refImage } = PhotoLoad();
+  const { onLoad, loaded, refPhoto } = PhotoLoad();
 
   return (
     <div id="tech">
@@ -22,7 +22,7 @@ export const Tech = () => {
         {techData.map((tech) => (
           <Card key={tech.id} title={tech.name}>
             <Placeholder hide={loaded} />
-            <Styled.Logo src={tech.logo} alt={`${tech.name} logo`} ref={refImage} onLoad={onLoad} hide={!loaded} />
+            <Styled.Logo src={tech.logo} alt={`${tech.name} logo`} ref={refPhoto} onLoad={onLoad} hide={!loaded} />
           </Card>
         ))}
       </Styled.CardBox>

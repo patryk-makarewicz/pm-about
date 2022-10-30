@@ -11,7 +11,7 @@ import * as Styled from './About.styles';
 export const About = () => {
   const { t } = useTranslation();
 
-  const { onLoad, loaded, refImage } = PhotoLoad();
+  const { onLoad, loaded, refPhoto } = PhotoLoad();
 
   return (
     <Styled.Wrapper>
@@ -21,7 +21,7 @@ export const About = () => {
         </Styled.Cloud>
         <Styled.Box>
           <Placeholder hide={loaded} />
-          <Styled.Photo src={Me} alt="Me" title="Patryk Makarewicz" ref={refImage} onLoad={onLoad} hide={!loaded} />
+          <Styled.Photo src={Me} alt="Me" title="Patryk Makarewicz" ref={refPhoto} onLoad={onLoad} hide={!loaded} />
         </Styled.Box>
       </Styled.Greeting>
       <Styled.Text $marginBottom="10px">
