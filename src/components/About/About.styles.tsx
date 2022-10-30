@@ -35,7 +35,6 @@ export const Photo = styled.img<PhotoProps>`
       : css`
           opacity: 1;
         `}
-  z-index: 1
 `;
 
 export const Greeting = styled.div`
