@@ -58,14 +58,6 @@ export const Header = () => {
     }
   };
 
-  const renderMode = () => {
-    if (mode) {
-      return <ModeDark />;
-    } else {
-      return <ModeLight />;
-    }
-  };
-
   const paths = [
     {
       href: '#about',
@@ -89,8 +81,13 @@ export const Header = () => {
     <>
       <Styled.Config id="about">
         <Styled.InnerWrapper $justifyEnd>
-          <Switch checked={mode} onChange={onChangeMode} size="small" style={{ margin: '0 10px' }} />
-          {renderMode()}
+          <Switch
+            checked={mode}
+            onChange={onChangeMode}
+            style={{ margin: '0 10px' }}
+            checkedChildren={<ModeDark style={{ marginTop: '3px' }} />}
+            unCheckedChildren={<ModeLight style={{ marginTop: '2px' }} width={18} height={17} />}
+          />
           <Button type="text" onClick={onChangeLanguage} style={{ marginLeft: '15px', padding: 0 }}>
             {renderFlag()}
           </Button>
