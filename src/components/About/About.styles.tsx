@@ -26,6 +26,7 @@ export const Box = styled.div`
 export const Photo = styled.img<PhotoProps>`
   width: 100%;
   height: 100%;
+  border-radius: 50%;
   transition: ease 1s all;
   ${({ hide }) =>
     hide
