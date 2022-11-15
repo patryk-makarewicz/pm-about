@@ -24,9 +24,9 @@ export const CardProjects = ({ avatar, title, description, tags, urlGithub, urlC
   const { onLoad, loaded, refPhoto } = PhotoLoad();
 
   return (
-    <Card
+    <Styled.Card
       {...props}
-      style={{ width: '100%' }}
+      style={{ width: '300px', margin: '10px' }}
       cover={
         <Styled.Photo
           alt="Project cover"
@@ -52,6 +52,6 @@ export const CardProjects = ({ avatar, title, description, tags, urlGithub, urlC
           </Tag>
         ))}
       </Styled.TagContainer>
-    </Card>
+    </Styled.Card>
   );
 };
