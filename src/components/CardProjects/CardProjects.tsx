@@ -1,4 +1,4 @@
-import { BranchesOutlined, CodeOutlined } from '@ant-design/icons';
+import { BranchesOutlined, CodeOutlined, DesktopOutlined } from '@ant-design/icons';
 import { Avatar, Tag, Card, CardProps } from 'antd';
 
 import { Button } from 'components/Button';
@@ -16,17 +16,18 @@ type CardProjectsProps = {
   tags: string[];
   urlGithub: string;
   urlCode: string;
+  urlDemo: string;
 };
 
 type Props = CardProjectsProps & CardProps;
 
-export const CardProjects = ({ avatar, title, description, tags, urlGithub, urlCode, ...props }: Props) => {
+export const CardProjects = ({ avatar, title, description, tags, urlGithub, urlCode, urlDemo, ...props }: Props) => {
   const { onLoad, loaded, refPhoto } = PhotoLoad();
 
   return (
-    <Card
+    <Styled.Card
       {...props}
-      style={{ width: '100%' }}
+      style={{ width: '300px', margin: '10px' }}
       cover={
         <Styled.Photo
           alt="Project cover"
@@ -43,6 +44,9 @@ export const CardProjects = ({ avatar, title, description, tags, urlGithub, urlC
         <Button type="text" href={urlCode} target="_blank">
           <CodeOutlined style={{ fontSize: '22px' }} />
         </Button>,
+        <Button type="text" href={urlDemo} target="_blank">
+          <DesktopOutlined style={{ fontSize: '22px' }} />
+        </Button>,
       ]}>
       <Meta avatar={<Avatar src={avatar} />} title={title} description={description} />
       <Styled.TagContainer>
@@ -52,6 +56,6 @@ export const CardProjects = ({ avatar, title, description, tags, urlGithub, urlC
           </Tag>
         ))}
       </Styled.TagContainer>
-    </Card>
+    </Styled.Card>
   );
 };
