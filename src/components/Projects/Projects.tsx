@@ -40,6 +40,7 @@ export const Projects = () => {
                   tags={repo.topics}
                   urlGithub={repo.owner.html_url}
                   urlCode={repo.html_url}
+                  urlDemo={repo.homepage}
                 />
               ))}
             </>

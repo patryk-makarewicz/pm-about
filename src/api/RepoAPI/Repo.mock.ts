@@ -1,4 +1,5 @@
 import { request } from 'api/request';
+
 import { RepoListModel } from './Repo.dto';
 
 export const createRepoListMock = () => {
@@ -10,9 +11,10 @@ export const createRepoListMock = () => {
       html_url: 'URL_html',
       owner: {
         avatar_url: 'URL_avatar',
-        html_url: 'URL_Github'
+        html_url: 'URL_Github',
       },
-      topics: ['react', 'recoil', 'typescript']
-    }
+      topics: ['react', 'recoil', 'typescript'],
+      homepage: 'URL_demo',
+    },
   ]);
 };

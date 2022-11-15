@@ -8,4 +8,5 @@ export type SingleRepoModel = {
     html_url: string;
   };
   topics: string[];
+  homepage: string;
 };
