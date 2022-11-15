@@ -54,7 +54,7 @@ export const Header = () => {
     if (language === 'en') {
       return <img src={FlagEn} alt="Language flag En" width={24} height={24} style={{ marginLeft: '3px' }} />;
     } else {
-      return <FlagPl width={30} height={25} />;
+      return <FlagPl width={27} height={32} />;
     }
   };
 
