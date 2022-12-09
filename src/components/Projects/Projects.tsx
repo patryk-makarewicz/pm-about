@@ -6,6 +6,7 @@ import { SingleRepoModel } from 'api/RepoAPI/Repo.model';
 import { useRepoList } from 'hooks/useRepoList';
 
 import { CardProjects } from 'components/CardProjects';
+import { ErrorBoundary } from 'components/ErrorBoundary';
 import { Spinner } from 'components/Spinner';
 import { SectionTitle } from 'components/Typography/SectionTitle';
 
@@ -19,34 +20,36 @@ export const Projects = () => {
     <div id="projects">
       <SectionTitle title={t('projects.title')} darkMode />
       <Styled.Paragraph>{t('projects.description')}</Styled.Paragraph>
-      <Styled.CardContainer>
-        {(() => {
-          if (isLoadingRepoList) {
-            return <Spinner />;
-          }
+      <ErrorBoundary>
+        <Styled.CardContainer>
+          {(() => {
+            if (isLoadingRepoList) {
+              return <Spinner />;
+            }
 
-          if (isErrorRepoList || repoList.length === 0) {
-            return <Empty />;
-          }
+            if (isErrorRepoList || repoList.length === 0) {
+              return <Empty />;
+            }
 
-          return (
-            <>
-              {repoList.map((repo: SingleRepoModel) => (
-                <CardProjects
-                  key={repo.id}
-                  avatar={repo.owner.avatar_url}
-                  title={repo.name}
-                  description={repo.description}
-                  tags={repo.topics}
-                  urlGithub={repo.owner.html_url}
-                  urlCode={repo.html_url}
-                  urlDemo={repo.homepage}
-                />
-              ))}
-            </>
-          );
-        })()}
-      </Styled.CardContainer>
+            return (
+              <>
+                {repoList.map((repo: SingleRepoModel) => (
+                  <CardProjects
+                    key={repo.id}
+                    avatar={repo.owner.avatar_url}
+                    title={repo.name}
+                    description={repo.description}
+                    tags={repo.topics}
+                    urlGithub={repo.owner.html_url}
+                    urlCode={repo.html_url}
+                    urlDemo={repo.homepage}
+                  />
+                ))}
+              </>
+            );
+          })()}
+        </Styled.CardContainer>
+      </ErrorBoundary>
     </div>
   );
 };
