@@ -18,7 +18,7 @@ const renderProjects = () => {
     baseElement,
     onClick,
     container,
-    getByText
+    getByText,
   };
 };
 
