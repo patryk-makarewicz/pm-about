@@ -53,5 +53,9 @@
     "success": {
       "generic": "Sukces"
     }
+  },
+  "errorBoundary": {
+    "message": "Upss... Spróbuj ponownie",
+    "button": "Odśwież stronę"
   }
 }

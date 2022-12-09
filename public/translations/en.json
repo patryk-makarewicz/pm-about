@@ -40,7 +40,6 @@
     "isRequired": "This field is required!",
     "sent": "Your message has been sent successfully"
   },
-
   "cookie": {
     "text": "By clicking Accept, you consent to our use of cookies. ",
     "textButton": "Website regulations.",
@@ -53,5 +52,9 @@
     "success": {
       "generic": "Successfully"
     }
+  },
+  "errorBoundary": {
+    "message": "Oops... Try once again",
+    "button": "Refresh page"
   }
 }
