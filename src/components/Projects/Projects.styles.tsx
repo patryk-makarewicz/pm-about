@@ -5,6 +5,7 @@ export const CardContainer = styled.div`
   margin: 40px auto 0;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 `;
 
 export const Paragraph = styled.p`
