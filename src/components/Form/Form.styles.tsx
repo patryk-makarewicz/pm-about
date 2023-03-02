@@ -38,7 +38,7 @@ const baseFieldsStyles = css`
   width: 100%;
   font-size: ${fontSize.s};
   border: 1px solid ${colors.gray2};
-  border-radius: 10px;
+  border-radius: 2px;
 
   &:focus {
     outline-style: inherit;

@@ -36,7 +36,7 @@ const Cookie = ({ onHandleShowTerms }: CookieType) => {
             background: '#389e0d',
             color: 'white',
             fontSize: '16px',
-            borderRadius: '6px',
+            borderRadius: '2px',
             fontFamily: 'Poppins',
           }}>
           {t('cookie.text')}

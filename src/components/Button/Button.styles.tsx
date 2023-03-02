@@ -10,7 +10,7 @@ interface ButtonProps {
 export const Button: typeof AntdButton = styled(AntdButton)<ButtonProps>`
   &&&,
   &.ant-btn {
-    border-radius: 6px;
+    border-radius: 2px;
   }
 
   &&&.ant-btn-text {

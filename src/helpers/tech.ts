@@ -87,7 +87,7 @@ export const techData: TechDataType = [
   },
   {
     id: 17,
-    name: 'Git Hub',
+    name: 'Git',
     logo: `${process.env.PUBLIC_URL}/assets/logo-git.png`,
   },
   {
